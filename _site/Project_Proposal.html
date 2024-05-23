@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing">
+<meta name="dcterms.date" content="2024-05-23">
 
-<title>Visual Analytics Project - About</title>
+<title>Visual Analytics Project - Group 7 Project Proposal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -123,7 +91,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Project_Proposal.html"> 
+    <a class="nav-link active" href="./Project_Proposal.html" aria-current="page"> 
 <span class="menu-text">Project Proposal</span></a>
   </li>  
   <li class="nav-item">
@@ -131,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -146,22 +114,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#problem-statements" id="toc-problem-statements" class="nav-link" data-scroll-target="#problem-statements">Problem Statements</a></li>
+  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a>
+  <ul class="collapse">
+  <li><a href="#problem-statement-1-patterns-of-life-of-vessels-and-ports" id="toc-problem-statement-1-patterns-of-life-of-vessels-and-ports" class="nav-link" data-scroll-target="#problem-statement-1-patterns-of-life-of-vessels-and-ports">Problem Statement 1:&nbsp;<strong>Patterns of Life of Vessels and Ports</strong></a></li>
+  <li><a href="#problem-statement-2-southseafood-express-corp-illegal-activities" id="toc-problem-statement-2-southseafood-express-corp-illegal-activities" class="nav-link" data-scroll-target="#problem-statement-2-southseafood-express-corp-illegal-activities">Problem Statement 2: <strong>SouthSeafood Express Corp Illegal Activities</strong></a></li>
+  <li><a href="#problem-statement-3-other-vessels-suspicious-activities" id="toc-problem-statement-3-other-vessels-suspicious-activities" class="nav-link" data-scroll-target="#problem-statement-3-other-vessels-suspicious-activities">Problem Statement 3: <strong>Other Vessels Suspicious Activities</strong></a></li>
+  <li><a href="#problem-statement-4-identifying-suspicious-new-behaviors" id="toc-problem-statement-4-identifying-suspicious-new-behaviors" class="nav-link" data-scroll-target="#problem-statement-4-identifying-suspicious-new-behaviors">Problem Statement 4: <strong>Identifying Suspicious New Behaviors</strong></a></li>
+  </ul></li>
+  <li><a href="#early-prototype" id="toc-early-prototype" class="nav-link" data-scroll-target="#early-prototype">Early Prototype</a></li>
+  <li><a href="#storyboard" id="toc-storyboard" class="nav-link" data-scroll-target="#storyboard">Storyboard</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Group 7 Project Proposal</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 23, 2024</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">May 23, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -170,15 +173,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>About this site</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>This project seeks to give students practical experience in developing interactive, web-based visual analytics applications using Shiny, thereby making data and analytics more accessible to those without technical backgrounds. Emphasizing the integration of data analysis and visualization techniques, the goal is to create intuitive, dynamic <strong>Shiny applications</strong> that facilitate data-driven decision-making.</p>
+</section>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>“Democratizing data and analytics” refers to making data and analytical tools accessible to a broader range of people within an organization or society, rather than restricting access to specialized data scientists or IT departments. This concept aims to empower more individuals to make data-driven decisions by providing them with the necessary tools, knowledge, and resources. With the skills and knowledge gained from the Visual Analytics module, we aim to create interactive data analytical tool to address the problem statements in <a href="https://vast-challenge.github.io/2024/MC2.html">VAST Challenge 2024: Mini Challenge 2</a>.</p>
+</section>
+<section id="problem-statements" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statements">Problem Statements</h2>
+<p>From Mini Challenge 2, the central problem is identifying instances and patterns of illegal fishing activities. This can be tackled through geographical and temporal analysis of CatchNet data, by developing new visual analytics tools and workflows that can be used to discover and understand signatures of different types of behavior.</p>
+<ol type="1">
+<li><p><strong>Patterns of Life of Vessels and Ports</strong>: FishEye analysts have long wanted to better understand the flow of commercially caught fish through Oceanus’s many ports. Which vessels deliver which products and when? What are the seasonal trends and anomalies in the port exit records?</p></li>
+<li><p><strong>SouthSeafood Express Corp Illegal Acitvities</strong>: Develop visualizations that illustrate the inappropriate behavior of SouthSeafood Express Corp vessels. How do their movement and catch contents compare to other fishing vessels? When and where did SouthSeafood Express Corp vessels perform their illegal fishing? How many different types of suspicious behaviors are observed? Use visual evidence to justify your conclusions.</p></li>
+<li><p><strong>Other Vessels Suspicious Activities</strong>: To support further Fisheye investigations, develop visual analytics workflows that allow you to discover other vessels engaging in behaviors similar to SouthSeafood Express Corp’s illegal activities? Provide visual evidence of the similarities.</p></li>
+<li><p><strong>Identifying Suspicious New Behaviors</strong>: How did fishing activity change after SouthSeafood Express Corp was caught? What new behaviors in the Oceanus commercial fishing community are most suspicious and why?</p></li>
+</ol>
+</section>
+<section id="approach" class="level2">
+<h2 class="anchored" data-anchor-id="approach">Approach</h2>
+<section id="problem-statement-1-patterns-of-life-of-vessels-and-ports" class="level3">
+<h3 class="anchored" data-anchor-id="problem-statement-1-patterns-of-life-of-vessels-and-ports">Problem Statement 1:&nbsp;<strong>Patterns of Life of Vessels and Ports</strong></h3>
+<p><strong>Which vessels deliver which products and when?</strong></p>
+<p>To understand how the commercially catch fish flow through the various ports in Oceanus, we first have to know which vessels go to which ports. Hence, using the <em>harbor report</em>, we can extract the information on which of the 178 fishing vessels visit which port and when. Then, the <em>harbor report</em> can be corroborated with the <em>harbor import report</em> to match the vessel with the cargo. The <em>harbor import records</em> Transactions can provide with the actual fish species that were in each of the cargo.</p>
+<p><strong>What are the seasonal trends and anomalies in the port exit records?</strong></p>
+<p>The <em>harbor import records</em> Transactions and Delivery Report provides the information of fish species, tonnage and date of the delivery. Coupling these information with the understanding of fish species availability in all the fishing grounds and ecological preserves , the seasonal trends and anomalies on how the volume (tonnage) and fish species changes over time can be analysed.</p>
+</section>
+<section id="problem-statement-2-southseafood-express-corp-illegal-activities" class="level3">
+<h3 class="anchored" data-anchor-id="problem-statement-2-southseafood-express-corp-illegal-activities">Problem Statement 2: <strong>SouthSeafood Express Corp Illegal Activities</strong></h3>
+<p>In Oceanus, there are three fishing grounds (Cod Table, Wrasse Beds and Tuna Shelf) and three ecological preserves (Ghoti Preserve, Nemo Reef and Don Limpet Preserve). Generally, a fishing vessel should not be found staying in the ecological preserves for extended duration beyond the time the vessels need to travel through the past the location.</p>
+<p><strong>When and where did SouthSeafood Express Corp vessels perform their illegal fishing?</strong></p>
+<p>First, we have to understand the movement of the two vessels (Snapper Snatcher and Roach Robber) owned by SouthSeafood Express Corp.&nbsp;By understand movement of the vessels through Oceanus, we can identify if any of the two vessels over stayed in any of the ecological preserves. This is a sign of illegal fishing.</p>
+<p><strong>How do their movement and catch contents compare to other fishing vessels?</strong></p>
+<p>This can be analysed through the <em>harbor import records</em> Transactions and Delivery Report, in conjunction with the <em>harbor report</em> to match the instances the two vessels were in the ports and what related cargo and content delivered through the port.</p>
+<p><strong>How many different types of suspicious behaviors are observed?</strong></p>
+<p>Other than going to the ecological preserves for extended period of time, analysis can be on what other vessels differs from the usual movement between fishing ground and ports. One of the suspicious activity could be extended period of movement around the port without docking. This behaviour is called <a href="https://www.bbc.com/future/article/20180607-how-to-spot-the-secretive-activities-of-rogue-fishing-boats">Transshipping</a>. With transshipping, vessels can transfer their fish catch to another boat, called a refrigerated cargo vessel, and refuel at sea to avoid having to go into port. Hence, in this analysis, we will study the <em>Vessel Movement</em> provided by the Oceanus Vessel Location System (OVLS) to verify if there are anomalies in behaviours such as Transshipping.</p>
+</section>
+<section id="problem-statement-3-other-vessels-suspicious-activities" class="level3">
+<h3 class="anchored" data-anchor-id="problem-statement-3-other-vessels-suspicious-activities">Problem Statement 3: <strong>Other Vessels Suspicious Activities</strong></h3>
+<p><strong>Discovering other vessels engaging in behaviors similar to SouthSeafood Express Corp’s illegal activities</strong></p>
+<p>&lt;to be updated&gt;</p>
+</section>
+<section id="problem-statement-4-identifying-suspicious-new-behaviors" class="level3">
+<h3 class="anchored" data-anchor-id="problem-statement-4-identifying-suspicious-new-behaviors">Problem Statement 4: <strong>Identifying Suspicious New Behaviors</strong></h3>
+<p><strong>How did fishing activity change after SouthSeafood Express Corp was caught?</strong></p>
+<p>SouthSeafood Express Corp’s vessels, have ceased operation since 2035-05-12 at City of Himark for Roach Robber and 2035-05-14 at City of Lomark for Snapper Snatcher.</p>
+<p>Hence, we will study the period before and after 2035-05-14 to analyse the changes in pattern. There are two areas that we can zoom into:</p>
+<ol type="1">
+<li>Compare the vessels movements before and after using the the <em>Vessel Movement</em> data and highlight the changes in volume of traffic to various ports, navigation points, fishing grounds and ecological reserves.</li>
+<li>Compare the catch content and cargo volume before and after using the <em>harbor import records</em>.</li>
+</ol>
+<p><strong>What new behaviors in the Oceanus commercial fishing community are most suspicious and why?</strong></p>
+<p>We will study the <em>Vessel Movement</em> provided by the Oceanus Vessel Location System (OVLS) to verify if there are anomalies in behaviours such as Transshipping.</p>
+</section>
+</section>
+<section id="early-prototype" class="level2">
+<h2 class="anchored" data-anchor-id="early-prototype">Early Prototype</h2>
+</section>
+<section id="storyboard" class="level2">
+<h2 class="anchored" data-anchor-id="storyboard">Storyboard</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Visual Analytics Project",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Project by Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,54 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Project_Proposal.html",
+    "href": "Project_Proposal.html",
+    "title": "Group 7 Project Proposal",
+    "section": "",
+    "text": "This project seeks to give students practical experience in developing interactive, web-based visual analytics applications using Shiny, thereby making data and analytics more accessible to those without technical backgrounds. Emphasizing the integration of data analysis and visualization techniques, the goal is to create intuitive, dynamic Shiny applications that facilitate data-driven decision-making."
+  },
+  {
+    "objectID": "Project_Proposal.html#project-overview",
+    "href": "Project_Proposal.html#project-overview",
+    "title": "Group 7 Project Proposal",
+    "section": "",
+    "text": "This project seeks to give students practical experience in developing interactive, web-based visual analytics applications using Shiny, thereby making data and analytics more accessible to those without technical backgrounds. Emphasizing the integration of data analysis and visualization techniques, the goal is to create intuitive, dynamic Shiny applications that facilitate data-driven decision-making."
+  },
+  {
+    "objectID": "Project_Proposal.html#motivation",
+    "href": "Project_Proposal.html#motivation",
+    "title": "Group 7 Project Proposal",
+    "section": "Motivation",
+    "text": "Motivation\n“Democratizing data and analytics” refers to making data and analytical tools accessible to a broader range of people within an organization or society, rather than restricting access to specialized data scientists or IT departments. This concept aims to empower more individuals to make data-driven decisions by providing them with the necessary tools, knowledge, and resources. With the skills and knowledge gained from the Visual Analytics module, we aim to create interactive data analytical tool to address the problem statements in VAST Challenge 2024: Mini Challenge 2."
+  },
+  {
+    "objectID": "Project_Proposal.html#problem-statements",
+    "href": "Project_Proposal.html#problem-statements",
+    "title": "Group 7 Project Proposal",
+    "section": "Problem Statements",
+    "text": "Problem Statements\nFrom Mini Challenge 2, the central problem is identifying instances and patterns of illegal fishing activities. This can be tackled through geographical and temporal analysis of CatchNet data, by developing new visual analytics tools and workflows that can be used to discover and understand signatures of different types of behavior.\n\nPatterns of Life of Vessels and Ports: FishEye analysts have long wanted to better understand the flow of commercially caught fish through Oceanus’s many ports. Which vessels deliver which products and when? What are the seasonal trends and anomalies in the port exit records?\nSouthSeafood Express Corp Illegal Acitvities: Develop visualizations that illustrate the inappropriate behavior of SouthSeafood Express Corp vessels. How do their movement and catch contents compare to other fishing vessels? When and where did SouthSeafood Express Corp vessels perform their illegal fishing? How many different types of suspicious behaviors are observed? Use visual evidence to justify your conclusions.\nOther Vessels Suspicious Activities: To support further Fisheye investigations, develop visual analytics workflows that allow you to discover other vessels engaging in behaviors similar to SouthSeafood Express Corp’s illegal activities? Provide visual evidence of the similarities.\nIdentifying Suspicious New Behaviors: How did fishing activity change after SouthSeafood Express Corp was caught? What new behaviors in the Oceanus commercial fishing community are most suspicious and why?"
+  },
+  {
+    "objectID": "Project_Proposal.html#approach",
+    "href": "Project_Proposal.html#approach",
+    "title": "Group 7 Project Proposal",
+    "section": "Approach",
+    "text": "Approach\n\nProblem Statement 1: Patterns of Life of Vessels and Ports\nWhich vessels deliver which products and when?\nTo understand how the commercially catch fish flow through the various ports in Oceanus, we first have to know which vessels go to which ports. Hence, using the harbor report, we can extract the information on which of the 178 fishing vessels visit which port and when. Then, the harbor report can be corroborated with the harbor import report to match the vessel with the cargo. The harbor import records Transactions can provide with the actual fish species that were in each of the cargo.\nWhat are the seasonal trends and anomalies in the port exit records?\nThe harbor import records Transactions and Delivery Report provides the information of fish species, tonnage and date of the delivery. Coupling these information with the understanding of fish species availability in all the fishing grounds and ecological preserves , the seasonal trends and anomalies on how the volume (tonnage) and fish species changes over time can be analysed.\n\n\nProblem Statement 2: SouthSeafood Express Corp Illegal Activities\nIn Oceanus, there are three fishing grounds (Cod Table, Wrasse Beds and Tuna Shelf) and three ecological preserves (Ghoti Preserve, Nemo Reef and Don Limpet Preserve). Generally, a fishing vessel should not be found staying in the ecological preserves for extended duration beyond the time the vessels need to travel through the past the location.\nWhen and where did SouthSeafood Express Corp vessels perform their illegal fishing?\nFirst, we have to understand the movement of the two vessels (Snapper Snatcher and Roach Robber) owned by SouthSeafood Express Corp. By understand movement of the vessels through Oceanus, we can identify if any of the two vessels over stayed in any of the ecological preserves. This is a sign of illegal fishing.\nHow do their movement and catch contents compare to other fishing vessels?\nThis can be analysed through the harbor import records Transactions and Delivery Report, in conjunction with the harbor report to match the instances the two vessels were in the ports and what related cargo and content delivered through the port.\nHow many different types of suspicious behaviors are observed?\nOther than going to the ecological preserves for extended period of time, analysis can be on what other vessels differs from the usual movement between fishing ground and ports. One of the suspicious activity could be extended period of movement around the port without docking. This behaviour is called Transshipping. With transshipping, vessels can transfer their fish catch to another boat, called a refrigerated cargo vessel, and refuel at sea to avoid having to go into port. Hence, in this analysis, we will study the Vessel Movement provided by the Oceanus Vessel Location System (OVLS) to verify if there are anomalies in behaviours such as Transshipping.\n\n\nProblem Statement 3: Other Vessels Suspicious Activities\nDiscovering other vessels engaging in behaviors similar to SouthSeafood Express Corp’s illegal activities\n&lt;to be updated&gt;\n\n\nProblem Statement 4: Identifying Suspicious New Behaviors\nHow did fishing activity change after SouthSeafood Express Corp was caught?\nSouthSeafood Express Corp’s vessels, have ceased operation since 2035-05-12 at City of Himark for Roach Robber and 2035-05-14 at City of Lomark for Snapper Snatcher.\nHence, we will study the period before and after 2035-05-14 to analyse the changes in pattern. There are two areas that we can zoom into:\n\nCompare the vessels movements before and after using the the Vessel Movement data and highlight the changes in volume of traffic to various ports, navigation points, fishing grounds and ecological reserves.\nCompare the catch content and cargo volume before and after using the harbor import records.\n\nWhat new behaviors in the Oceanus commercial fishing community are most suspicious and why?\nWe will study the Vessel Movement provided by the Oceanus Vessel Location System (OVLS) to verify if there are anomalies in behaviours such as Transshipping."
+  },
+  {
+    "objectID": "Project_Proposal.html#early-prototype",
+    "href": "Project_Proposal.html#early-prototype",
+    "title": "Group 7 Project Proposal",
+    "section": "Early Prototype",
+    "text": "Early Prototype"
+  },
+  {
+    "objectID": "Project_Proposal.html#storyboard",
+    "href": "Project_Proposal.html#storyboard",
+    "title": "Group 7 Project Proposal",
+    "section": "Storyboard",
+    "text": "Storyboard"
   }
 ]

@@ -2,7 +2,7 @@
 title: "Visual Analytics Project"
 ---
 
-This is a Quarto website.
+Project by Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
