@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">May 23, 2024</p>
+      <p class="date-modified">May 24, 2024</p>
     </div>
   </div>
     
@@ -196,24 +196,60 @@ ul.task-list li input[type="checkbox"] {
 <section id="problem-statement-1-patterns-of-life-of-vessels-and-ports" class="level3">
 <h3 class="anchored" data-anchor-id="problem-statement-1-patterns-of-life-of-vessels-and-ports">Problem Statement 1:&nbsp;<strong>Patterns of Life of Vessels and Ports</strong></h3>
 <p><strong>Which vessels deliver which products and when?</strong></p>
-<p>To understand how the commercially catch fish flow through the various ports in Oceanus, we first have to know which vessels go to which ports. Hence, using the <em>harbor report</em>, we can extract the information on which of the 178 fishing vessels visit which port and when. Then, the <em>harbor report</em> can be corroborated with the <em>harbor import report</em> to match the vessel with the cargo. The <em>harbor import records</em> Transactions can provide with the actual fish species that were in each of the cargo.</p>
+<p>To understand how the commercially catch fish flow through the various ports in Oceanus, we first have to know which vessels go to which ports. Hence, using the <em>harbor report</em>, we can extract the information on which of the 178 fishing vessels visit which port and when. Then, the <em>harbor report</em> can be corroborated with the <em>harbor import report</em> to match the vessel with the cargo. The <em>harbor import records</em> Transactions can provide with the actual fish species that were in each of the cargo. However, as the <em>harbor report</em> may not be 100% accurate, we will also try to corroborate the information with the transponder ping data as well as the dwell time. We can also try to find an estimate of the dwell time (time spent at one location) spent when off loading cargo and use that estimate for further analysis.</p>
+<p>We will employ the following possible visualisations:</p>
+<ol type="1">
+<li><strong>Sankey diagrams</strong>: To illustrate the flow of the cargo from the vessels to the port.</li>
+<li><strong>Bipartite graphs</strong>: To illustrate the vessel with the type of cargo - to allow for customisation based on the chosen port and duration (time-stamp).</li>
+</ol>
 <p><strong>What are the seasonal trends and anomalies in the port exit records?</strong></p>
 <p>The <em>harbor import records</em> Transactions and Delivery Report provides the information of fish species, tonnage and date of the delivery. Coupling these information with the understanding of fish species availability in all the fishing grounds and ecological preserves , the seasonal trends and anomalies on how the volume (tonnage) and fish species changes over time can be analysed.</p>
+<p>We will employ the following visualisations:</p>
+<ol type="1">
+<li><strong>Time Series Line Chart</strong>: To show how the tonage and fish specieis deliveries vary over time. This is to identify seasonal peak and troughs in fish deliveries and detect any unusual spikes or drops.</li>
+<li><strong>Heatmaps</strong>: Provide a visual summary of fish species deliveries across different month or year. Possibly include the breakdown by each port.</li>
+<li><strong>Box Plots</strong>: Summarise the distribution of deliveries by month and highlight outliers. This is to identify typical delivery volumes and periods with unusally high or low deliveries.</li>
+</ol>
 </section>
 <section id="problem-statement-2-southseafood-express-corp-illegal-activities" class="level3">
 <h3 class="anchored" data-anchor-id="problem-statement-2-southseafood-express-corp-illegal-activities">Problem Statement 2: <strong>SouthSeafood Express Corp Illegal Activities</strong></h3>
 <p>In Oceanus, there are three fishing grounds (Cod Table, Wrasse Beds and Tuna Shelf) and three ecological preserves (Ghoti Preserve, Nemo Reef and Don Limpet Preserve). Generally, a fishing vessel should not be found staying in the ecological preserves for extended duration beyond the time the vessels need to travel through the past the location.</p>
 <p><strong>When and where did SouthSeafood Express Corp vessels perform their illegal fishing?</strong></p>
 <p>First, we have to understand the movement of the two vessels (Snapper Snatcher and Roach Robber) owned by SouthSeafood Express Corp.&nbsp;By understand movement of the vessels through Oceanus, we can identify if any of the two vessels over stayed in any of the ecological preserves. This is a sign of illegal fishing.</p>
+<p>We will employ the following visualisations:</p>
+<ol type="1">
+<li><strong>Network graph:</strong> To understand the movements of the vessels and identify where SouthSeafood Express Corp perform their illegal fishing.</li>
+<li><strong>Scatter Plot:</strong> Plot vessel locations on a map, with points colored based on the duration of stay. This allows for easy identification of illegal stays. Interactivity to include information on date,time,dwell and vessel name</li>
+</ol>
 <p><strong>How do their movement and catch contents compare to other fishing vessels?</strong></p>
 <p>This can be analysed through the <em>harbor import records</em> Transactions and Delivery Report, in conjunction with the <em>harbor report</em> to match the instances the two vessels were in the ports and what related cargo and content delivered through the port.</p>
+<ol type="1">
+<li><p><strong>Bar Chart</strong>: Compare the total tonnage of catch for SouthSeafood Express Corp vessels with other fishing vessels.</p></li>
+<li><p><strong>Scatter Plot</strong>: Plot the frequency of port visits for SouthSeafood Express Corp vessels against other fishing vessels to compare their movement patterns.</p></li>
+<li><p><strong>Box Plot</strong>: Show the distribution of catch sizes for SouthSeafood Express Corp vessels and other fishing vessels to compare the variability in catch contents.</p></li>
+</ol>
 <p><strong>How many different types of suspicious behaviors are observed?</strong></p>
 <p>Other than going to the ecological preserves for extended period of time, analysis can be on what other vessels differs from the usual movement between fishing ground and ports. One of the suspicious activity could be extended period of movement around the port without docking. This behaviour is called <a href="https://www.bbc.com/future/article/20180607-how-to-spot-the-secretive-activities-of-rogue-fishing-boats">Transshipping</a>. With transshipping, vessels can transfer their fish catch to another boat, called a refrigerated cargo vessel, and refuel at sea to avoid having to go into port. Hence, in this analysis, we will study the <em>Vessel Movement</em> provided by the Oceanus Vessel Location System (OVLS) to verify if there are anomalies in behaviours such as Transshipping.</p>
+<p>We will employ the following visualisations:</p>
+<ol type="1">
+<li><strong>Scatter Plot</strong>: Plot vessel locations on a map, with points colored based on the duration of stay. This allows for easy identification of illegal stays. Interactivity to include information on date,time,dwell and vessel name</li>
+</ol>
 </section>
 <section id="problem-statement-3-other-vessels-suspicious-activities" class="level3">
 <h3 class="anchored" data-anchor-id="problem-statement-3-other-vessels-suspicious-activities">Problem Statement 3: <strong>Other Vessels Suspicious Activities</strong></h3>
 <p><strong>Discovering other vessels engaging in behaviors similar to SouthSeafood Express Corp’s illegal activities</strong></p>
-<p>&lt;to be updated&gt;</p>
+<p>We will first have to map out the behaviour and patterns of SouthSeafood Express to know what / where are they engaging in illegal activities. We can possibly identify this by their movement pattern within Oceanus, also looking at their dwell times at the various locations, especially areas in restricted areas.</p>
+<p>Some possible visualisations can include:</p>
+<ul>
+<li><p>Geographical plots of the movement pattern with temporal analysis - to look at the typical movement pattern, or any sudden changes in directions, or lingering in restricted areas.</p></li>
+<li><p>Graphs to highlight periods (or timeline) where SouthSeafood Express was active.</p></li>
+</ul>
+<p>Thereafter, we will try to compare the patterns with other vessels to see if any of them have similar patterns or behaviours. Visualisations that we can use include:</p>
+<ul>
+<li><p><strong>Interactive Maps</strong>: Create interactive maps that allow analysts to explore vessel movements and fishing zones.</p></li>
+<li><p><strong>Timelines and Heatmaps</strong>: Develop timelines and heatmaps to visualize temporal and spatial patterns of activity.</p></li>
+<li><p><strong>Comparative Charts</strong>: Use bar charts, line graphs, and scatter plots to compare activities and catch data between SouthSeafood Express Corp and other vessels</p></li>
+</ul>
 </section>
 <section id="problem-statement-4-identifying-suspicious-new-behaviors" class="level3">
 <h3 class="anchored" data-anchor-id="problem-statement-4-identifying-suspicious-new-behaviors">Problem Statement 4: <strong>Identifying Suspicious New Behaviors</strong></h3>
@@ -226,6 +262,13 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><strong>What new behaviors in the Oceanus commercial fishing community are most suspicious and why?</strong></p>
 <p>We will study the <em>Vessel Movement</em> provided by the Oceanus Vessel Location System (OVLS) to verify if there are anomalies in behaviours such as Transshipping.</p>
+<p>We will employ the following visualisations:</p>
+<ol type="1">
+<li><p><strong>Line Chart</strong>: Plot the frequency of visits to various locations over time before and after the specified dates.</p></li>
+<li><p><strong>Heatmap</strong>: Visualize the distribution of vessel movements across different locations before and after to identify any spatial patterns.</p></li>
+<li><p><strong>Bar Chart</strong>: Compare the total cargo volume before and after the specified dates.</p></li>
+<li><p><strong>Stacked Bar Chart</strong>: Show the composition of catch content (types of fish) before and after to identify any shifts in composition.</p></li>
+</ol>
 </section>
 </section>
 <section id="early-prototype" class="level2">

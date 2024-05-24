@@ -1,6 +1,8 @@
 ---
 title: "Group 7 Project Proposal" 
-author: "Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing" date: "May 23, 2024" 
+author: "Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing" 
+date: "May 23, 2024" 
+
 date-modified: "last-modified" 
 execute:   
   eval: true   
