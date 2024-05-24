@@ -1,13 +1,12 @@
 ---
-title: "Group 7 Project Proposal"
-author: "Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing "
-date: "May 23, 2024"
-date-modified: "last-modified"
-execute:
-  eval: true
-  echo: true
-  warning: false
-  freeze: true
+title: "Group 7 Project Proposal" 
+author: "Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing" date: "May 23, 2024" 
+date-modified: "last-modified" 
+execute:   
+  eval: true   
+  echo: true   
+  warning: false   
+  freeze: true 
 ---
 
 ## Project Overview
@@ -36,11 +35,22 @@ From Mini Challenge 2, the central problem is identifying instances and patterns
 
 **Which vessels deliver which products and when?**
 
-To understand how the commercially catch fish flow through the various ports in Oceanus, we first have to know which vessels go to which ports. Hence, using the *harbor report*, we can extract the information on which of the 178 fishing vessels visit which port and when. Then, the *harbor report* can be corroborated with the *harbor import report* to match the vessel with the cargo. The *harbor import records* Transactions can provide with the actual fish species that were in each of the cargo.
+To understand how the commercially catch fish flow through the various ports in Oceanus, we first have to know which vessels go to which ports. Hence, using the *harbor report*, we can extract the information on which of the 178 fishing vessels visit which port and when. Then, the *harbor report* can be corroborated with the *harbor import report* to match the vessel with the cargo. The *harbor import records* Transactions can provide with the actual fish species that were in each of the cargo. However, as the *harbor report* may not be 100% accurate, we will also try to corroborate the information with the transponder ping data as well as the dwell time. We can also try to find an estimate of the dwell time (time spent at one location) spent when off loading cargo and use that estimate for further analysis.
+
+We will employ the following possible visualisations:
+
+1.  **Sankey diagrams**: To illustrate the flow of the cargo from the vessels to the port.
+2.  **Bipartite graphs**: To illustrate the vessel with the type of cargo - to allow for customisation based on the chosen port and duration (time-stamp).
 
 **What are the seasonal trends and anomalies in the port exit records?**
 
 The *harbor import records* Transactions and Delivery Report provides the information of fish species, tonnage and date of the delivery. Coupling these information with the understanding of fish species availability in all the fishing grounds and ecological preserves , the seasonal trends and anomalies on how the volume (tonnage) and fish species changes over time can be analysed.
+
+We will employ the following visualisations:
+
+1.  **Time Series Line Chart**: To show how the tonage and fish specieis deliveries vary over time. This is to identify seasonal peak and troughs in fish deliveries and detect any unusual spikes or drops.
+2.  **Heatmaps**: Provide a visual summary of fish species deliveries across different month or year. Possibly include the breakdown by each port.
+3.  **Box Plots**: Summarise the distribution of deliveries by month and highlight outliers. This is to identify typical delivery volumes and periods with unusally high or low deliveries.
 
 ### Problem Statement 2: **SouthSeafood Express Corp Illegal Activities**
 
@@ -50,19 +60,48 @@ In Oceanus, there are three fishing grounds (Cod Table, Wrasse Beds and Tuna She
 
 First, we have to understand the movement of the two vessels (Snapper Snatcher and Roach Robber) owned by SouthSeafood Express Corp. By understand movement of the vessels through Oceanus, we can identify if any of the two vessels over stayed in any of the ecological preserves. This is a sign of illegal fishing.
 
+We will employ the following visualisations:
+
+1.  **Network graph:** To understand the movements of the vessels and identify where SouthSeafood Express Corp perform their illegal fishing.
+2.  **Scatter Plot:** Plot vessel locations on a map, with points colored based on the duration of stay. This allows for easy identification of illegal stays. Interactivity to include information on date,time,dwell and vessel name
+
 **How do their movement and catch contents compare to other fishing vessels?**
 
 This can be analysed through the *harbor import records* Transactions and Delivery Report, in conjunction with the *harbor report* to match the instances the two vessels were in the ports and what related cargo and content delivered through the port.
+
+1.  **Bar Chart**: Compare the total tonnage of catch for SouthSeafood Express Corp vessels with other fishing vessels.
+
+2.  **Scatter Plot**: Plot the frequency of port visits for SouthSeafood Express Corp vessels against other fishing vessels to compare their movement patterns.
+
+3.  **Box Plot**: Show the distribution of catch sizes for SouthSeafood Express Corp vessels and other fishing vessels to compare the variability in catch contents.
 
 **How many different types of suspicious behaviors are observed?**
 
 Other than going to the ecological preserves for extended period of time, analysis can be on what other vessels differs from the usual movement between fishing ground and ports. One of the suspicious activity could be extended period of movement around the port without docking. This behaviour is called [Transshipping](https://www.bbc.com/future/article/20180607-how-to-spot-the-secretive-activities-of-rogue-fishing-boats). With transshipping, vessels can transfer their fish catch to another boat, called a refrigerated cargo vessel, and refuel at sea to avoid having to go into port. Hence, in this analysis, we will study the *Vessel Movement* provided by the Oceanus Vessel Location System (OVLS) to verify if there are anomalies in behaviours such as Transshipping.
 
+We will employ the following visualisations:
+
+1.  **Scatter Plot**: Plot vessel locations on a map, with points colored based on the duration of stay. This allows for easy identification of illegal stays. Interactivity to include information on date,time,dwell and vessel name
+
 ### Problem Statement 3: **Other Vessels Suspicious Activities**
 
 **Discovering other vessels engaging in behaviors similar to SouthSeafood Express Corp’s illegal activities**
 
-\<to be updated\>
+We will first have to map out the behaviour and patterns of SouthSeafood Express to know what / where are they engaging in illegal activities. We can possibly identify this by their movement pattern within Oceanus, also looking at their dwell times at the various locations, especially areas in restricted areas.
+
+Some possible visualisations can include:
+
+-   Geographical plots of the movement pattern with temporal analysis - to look at the typical movement pattern, or any sudden changes in directions, or lingering in restricted areas.
+
+-   Graphs to highlight periods (or timeline) where SouthSeafood Express was active.
+
+Thereafter, we will try to compare the patterns with other vessels to see if any of them have similar patterns or behaviours. Visualisations that we can use include:
+
+-   **Interactive Maps**: Create interactive maps that allow analysts to explore vessel movements and fishing zones.
+
+-   **Timelines and Heatmaps**: Develop timelines and heatmaps to visualize temporal and spatial patterns of activity.
+
+-   **Comparative Charts**: Use bar charts, line graphs, and scatter plots to compare activities and catch data between SouthSeafood Express Corp and other vessels
 
 ### Problem Statement 4: **Identifying Suspicious New Behaviors**
 
@@ -78,6 +117,16 @@ Hence, we will study the period before and after 2035-05-14 to analyse the chang
 **What new behaviors in the Oceanus commercial fishing community are most suspicious and why?**
 
 We will study the *Vessel Movement* provided by the Oceanus Vessel Location System (OVLS) to verify if there are anomalies in behaviours such as Transshipping.
+
+We will employ the following visualisations:
+
+1.  **Line Chart**: Plot the frequency of visits to various locations over time before and after the specified dates.
+
+2.  **Heatmap**: Visualize the distribution of vessel movements across different locations before and after to identify any spatial patterns.
+
+3.  **Bar Chart**: Compare the total cargo volume before and after the specified dates.
+
+4.  **Stacked Bar Chart**: Show the composition of catch content (types of fish) before and after to identify any shifts in composition.
 
 ## Early Prototype
 
