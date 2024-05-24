@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Visual Analytics Project",
+    "title": "Prevent Illegal Fishing in Oceanus",
     "section": "",
-    "text": "Project by Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "In Oceanus, island life is defined by the coming and going of seafaring vessels, many of which are operated by commercial fishing companies. Typically, the movement of ships and goods are a sign of Oceanus’s healthy economy, especially in the fishing business. But mundane routines can be disrupted by a major event. Analysts at FishEye International, a non-profit organization that aims to find and prevent illegal fishing, need your help to better understand one such event.\nFishEye has learned that SouthSeafood Express Corp has been caught fishing illegally. The scandal caused a major disruption in the close-knit fishing community. FishEye has been collecting data on ship movements and shipping records in hopes that they could assemble a cohesive store of knowledge that will allow them to better understand local commercial fishing behavior. FishEye processed open-source and commercial vessel tracking and shipping records into CatchNet: the Oceanus Knowledge Graph. Analysts examine and correct data as it is loaded but need your help to create analytical capabilities for this data.\nThis project by Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing aims to provide FishEye a ShinyApp, an interactive tool to explore the movement patterns of the fishing vessels in Oceanus, using SouthSeafood Express as the example of illegal fishing activities."
   },
   {
     "objectID": "about.html",
