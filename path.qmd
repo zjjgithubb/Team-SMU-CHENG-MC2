@@ -1,0 +1,29 @@
+---
+title: "Path Plotter"
+
+format: html
+---
+
+# Welcome to My Quarto Website
+
+This website contains various analyses and visualizations.
+
+# Embedding a Shiny App
+
+You can embed your Shiny app into this website using an iframe.
+
+<iframe src="https://zjjgithub.shinyapps.io/PathPlotter/" width="100%" height="800px" frameborder="0">
+
+</iframe>
+
+# Additional Content
+
+You can add more sections, text, and other content to your Quarto website.
+
+## Section 1
+
+Some content here.
+
+## Section 2
+
+More content here.

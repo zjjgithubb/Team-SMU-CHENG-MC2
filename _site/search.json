@@ -61,5 +61,26 @@
     "title": "Group 7 Project Proposal",
     "section": "Storyboard",
     "text": "Storyboard"
+  },
+  {
+    "objectID": "path.html",
+    "href": "path.html",
+    "title": "Path Plotter",
+    "section": "",
+    "text": "This website contains various analyses and visualizations."
+  },
+  {
+    "objectID": "path.html#section-1",
+    "href": "path.html#section-1",
+    "title": "Path Plotter",
+    "section": "Section 1",
+    "text": "Section 1\nSome content here."
+  },
+  {
+    "objectID": "path.html#section-2",
+    "href": "path.html#section-2",
+    "title": "Path Plotter",
+    "section": "Section 2",
+    "text": "Section 2\nMore content here."
   }
 ]

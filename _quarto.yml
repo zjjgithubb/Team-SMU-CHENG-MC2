@@ -7,6 +7,8 @@ website:
     left:
       - href: Project_Proposal.html
         text: Project Proposal
+      - href: Path.html
+        text: Path Plotter   
       - href: index.qmd
         text: Home
       - about.qmd
