@@ -1,9 +1,6 @@
 ---
 title: "Approach"
 
-author: "Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing" 
-date: "21 Jun 2024" 
-
 date-modified: "last-modified" 
 execute:   
   eval: true   
@@ -11,3 +8,85 @@ execute:
   warning: false   
   freeze: true 
 ---
+
+# Three Parts to the Project
+
+The team divided the project into three key parts:
+
+![](images/clipboard-450755038.png)
+
+## Part 1 - Analysis of the Data
+
+In the first part of the project, the team went through the dataset provided, which comprised two files:
+
+-   geojson file of the locations in Oceanus
+
+-   and a graph data, which covers Vessel Movement, Harbor Records, and Harbor Import Records.
+
+For the nodes, we have:
+
++-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Data            | Description                                  | Remarks                                                                                                                                 |
++=================+==============================================+=========================================================================================================================================+
+| Fish            | 10 Species of Fish                           | Key fields are the:                                                                                                                     |
+|                 |                                              |                                                                                                                                         |
+|                 |                                              | `name` and `id`                                                                                                                         |
++-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Location        | Contains Point, City and Region              | Contains the `Name` and id of the location - key field is the `id`                                                                      |
+|                 |                                              |                                                                                                                                         |
+|                 |                                              | `fish_species_present` is only listed for the region. Only 3 region for commercial fishing - **Cod Table, Tuna Shelf and Wrasse Beds**. |
++-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Delivery Report | 5307 Delivery Report                         | Contains the `id` tied to the cargo id.                                                                                                 |
+|                 |                                              |                                                                                                                                         |
+|                 |                                              | Also contains the qty by tons (`qty_tons`) and the date of the delivery (`date`).                                                       |
++-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Fishing Vessel  | 178 Fishing Vessel                           | Contains the `Name` and id of the vessel. We can use `id` to identify the vessels.                                                      |
+|                 |                                              |                                                                                                                                         |
+|                 |                                              | Other info includes: `flag_country`, `company`, `tonnage`, `length_overall`,                                                            |
++-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Cargo Vessel    | 100 Cargo Vessels                            | To explore given that these vessels can be used for transshipment or IUU activities.                                                    |
++-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+| Other Vessels   | Such as Passenger, Research, Tour and Others | KIV - but dont think needed for our analysis                                                                                            |
++-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+
+And for the edges:
+
++------------------+------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Data             | Description                                                                                                | Remarks                                                                                                       |
++==================+============================================================================================================+===============================================================================================================+
+| Harbor Reports   | Contains information about the vessel docking at which harbor.                                             | Key fields here are:                                                                                          |
+|                  |                                                                                                            |                                                                                                               |
+|                  | There is a key column, but not sure what it means.                                                         | `source` which is tied to the `id` of a vessel.                                                               |
+|                  |                                                                                                            |                                                                                                               |
+|                  | Contains a few other columns with aphorism, holiday greeting etc but seems not impt for our analysis here. | `target` which is tied to the `name` of the city.                                                             |
+|                  |                                                                                                            |                                                                                                               |
+|                  |                                                                                                            | `date_added` and `last_edited_date` are the two key dates available                                           |
++------------------+------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Transaction      | Information from OCEANS                                                                                    | Key fields here are:                                                                                          |
+|                  |                                                                                                            |                                                                                                               |
+|                  | Each transaction has two rows - one connecting the transaction to the City, the other to the fish species. | `source` which is tied to the `id` of a cargo.                                                                |
+|                  |                                                                                                            |                                                                                                               |
+|                  |                                                                                                            | `target` which is tied to the `name` of the city and the `id` of the fish.                                    |
+|                  |                                                                                                            |                                                                                                               |
+|                  |                                                                                                            | `date_added` and `last_edited_date` are the two key dates available                                           |
++------------------+------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Transponder Ping | Information from OVLS                                                                                      | Key fields here are:                                                                                          |
+|                  |                                                                                                            |                                                                                                               |
+|                  | Contains information about the time of ping, dwell time, and location.                                     | `source` which is tied to the `name`of a location.                                                            |
+|                  |                                                                                                            |                                                                                                               |
+|                  |                                                                                                            | `target` which is tied to the `id` of the vessel.                                                             |
+|                  |                                                                                                            |                                                                                                               |
+|                  |                                                                                                            | `time`, `date_added`and `last_edited_date` are the three dates available - should be focusing on `time` here. |
++------------------+------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+Further data analysis done will be highlighted under the Data Analysis tab. Also, through the analysis, the team also tried to tag the Harbor Import Records to the vessels, and this analysis can be found under Matching Records.
+
+## Part 2 - Understanding IUU through SouthSeaFood Express
+
+After we performed the data analysis, we will try to learn more about IUU through the activities of SouthSeaFood Express.
+
+This include check the vessels under this company, looking at the paths in Oceanus, where they visited and stayed and what activities were suspicious.
+
+An understanding of their activities would help us to identify other IUU activities, which lead us to the last part.
+
+## Part 3 - Discover IUU activities and Identify New Behaviours

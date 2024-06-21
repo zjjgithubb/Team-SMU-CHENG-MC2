@@ -6,8 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing">
-<meta name="dcterms.date" content="2024-06-21">
 
 <title>Group 7 - Approach</title>
 <style>
@@ -133,11 +131,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#three-parts-to-the-project" id="toc-three-parts-to-the-project" class="nav-link active" data-scroll-target="#three-parts-to-the-project">Three Parts to the Project</a>
+  <ul class="collapse">
+  <li><a href="#part-1---analysis-of-the-data" id="toc-part-1---analysis-of-the-data" class="nav-link" data-scroll-target="#part-1---analysis-of-the-data">Part 1 - Analysis of the Data</a></li>
+  <li><a href="#part-2---understanding-iuu-through-southseafood-express" id="toc-part-2---understanding-iuu-through-southseafood-express" class="nav-link" data-scroll-target="#part-2---understanding-iuu-through-southseafood-express">Part 2 - Understanding IUU through SouthSeaFood Express</a></li>
+  <li><a href="#part-3---discover-iuu-activities-and-identify-new-behaviours" id="toc-part-3---discover-iuu-activities-and-identify-new-behaviours" class="nav-link" data-scroll-target="#part-3---discover-iuu-activities-and-identify-new-behaviours">Part 3 - Discover IUU activities and Identify New Behaviours</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -146,21 +155,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">June 21, 2024</p>
-    </div>
-  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
@@ -176,8 +173,127 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="three-parts-to-the-project" class="level1">
+<h1>Three Parts to the Project</h1>
+<p>The team divided the project into three key parts:</p>
+<p><img src="images/clipboard-450755038.png" class="img-fluid"></p>
+<section id="part-1---analysis-of-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="part-1---analysis-of-the-data">Part 1 - Analysis of the Data</h2>
+<p>In the first part of the project, the team went through the dataset provided, which comprised two files:</p>
+<ul>
+<li><p>geojson file of the locations in Oceanus</p></li>
+<li><p>and a graph data, which covers Vessel Movement, Harbor Records, and Harbor Import Records.</p></li>
+</ul>
+<p>For the nodes, we have:</p>
+<table class="table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 23%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Description</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fish</td>
+<td>10 Species of Fish</td>
+<td><p>Key fields are the:</p>
+<p><code>name</code> and <code>id</code></p></td>
+</tr>
+<tr class="even">
+<td>Location</td>
+<td>Contains Point, City and Region</td>
+<td><p>Contains the <code>Name</code> and id of the location - key field is the <code>id</code></p>
+<p><code>fish_species_present</code> is only listed for the region. Only 3 region for commercial fishing - <strong>Cod Table, Tuna Shelf and Wrasse Beds</strong>.</p></td>
+</tr>
+<tr class="odd">
+<td>Delivery Report</td>
+<td>5307 Delivery Report</td>
+<td><p>Contains the <code>id</code> tied to the cargo id.</p>
+<p>Also contains the qty by tons (<code>qty_tons</code>) and the date of the delivery (<code>date</code>).</p></td>
+</tr>
+<tr class="even">
+<td>Fishing Vessel</td>
+<td>178 Fishing Vessel</td>
+<td><p>Contains the <code>Name</code> and id of the vessel. We can use <code>id</code> to identify the vessels.</p>
+<p>Other info includes: <code>flag_country</code>, <code>company</code>, <code>tonnage</code>, <code>length_overall</code>,</p></td>
+</tr>
+<tr class="odd">
+<td>Cargo Vessel</td>
+<td>100 Cargo Vessels</td>
+<td>To explore given that these vessels can be used for transshipment or IUU activities.</td>
+</tr>
+<tr class="even">
+<td>Other Vessels</td>
+<td>Such as Passenger, Research, Tour and Others</td>
+<td>KIV - but dont think needed for our analysis</td>
+</tr>
+</tbody>
+</table>
+<p>And for the edges:</p>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 45%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Description</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Harbor Reports</td>
+<td><p>Contains information about the vessel docking at which harbor.</p>
+<p>There is a key column, but not sure what it means.</p>
+<p>Contains a few other columns with aphorism, holiday greeting etc but seems not impt for our analysis here.</p></td>
+<td><p>Key fields here are:</p>
+<p><code>source</code> which is tied to the <code>id</code> of a vessel.</p>
+<p><code>target</code> which is tied to the <code>name</code> of the city.</p>
+<p><code>date_added</code> and <code>last_edited_date</code> are the two key dates available</p></td>
+</tr>
+<tr class="even">
+<td>Transaction</td>
+<td><p>Information from OCEANS</p>
+<p>Each transaction has two rows - one connecting the transaction to the City, the other to the fish species.</p></td>
+<td><p>Key fields here are:</p>
+<p><code>source</code> which is tied to the <code>id</code> of a cargo.</p>
+<p><code>target</code> which is tied to the <code>name</code> of the city and the <code>id</code> of the fish.</p>
+<p><code>date_added</code> and <code>last_edited_date</code> are the two key dates available</p></td>
+</tr>
+<tr class="odd">
+<td>Transponder Ping</td>
+<td><p>Information from OVLS</p>
+<p>Contains information about the time of ping, dwell time, and location.</p></td>
+<td><p>Key fields here are:</p>
+<p><code>source</code> which is tied to the <code>name</code>of a location.</p>
+<p><code>target</code> which is tied to the <code>id</code> of the vessel.</p>
+<p><code>time</code>, <code>date_added</code>and <code>last_edited_date</code> are the three dates available - should be focusing on <code>time</code> here.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Further data analysis done will be highlighted under the Data Analysis tab. Also, through the analysis, the team also tried to tag the Harbor Import Records to the vessels, and this analysis can be found under Matching Records.</p>
+</section>
+<section id="part-2---understanding-iuu-through-southseafood-express" class="level2">
+<h2 class="anchored" data-anchor-id="part-2---understanding-iuu-through-southseafood-express">Part 2 - Understanding IUU through SouthSeaFood Express</h2>
+<p>After we performed the data analysis, we will try to learn more about IUU through the activities of SouthSeaFood Express.</p>
+<p>This include check the vessels under this company, looking at the paths in Oceanus, where they visited and stayed and what activities were suspicious.</p>
+<p>An understanding of their activities would help us to identify other IUU activities, which lead us to the last part.</p>
+</section>
+<section id="part-3---discover-iuu-activities-and-identify-new-behaviours" class="level2">
+<h2 class="anchored" data-anchor-id="part-3---discover-iuu-activities-and-identify-new-behaviours">Part 3 - Discover IUU activities and Identify New Behaviours</h2>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
