@@ -251,7 +251,8 @@ vessel_movement_long <- vessel_movement %>%
 ```
 
 ```{r}
-#| echo = FALSE
+#| echo: FALSE
+
 a <- vessel_movement_long %>% 
   mutate(month = as.factor(month)) %>% 
   newggslopegraph(month,n, loc,
@@ -267,9 +268,10 @@ a <- a +
   geom_text(aes(x = 4, y = 150, label = "SouthSeafood caught"),
             color = "red",
             hjust = 1.1,
-            size = 3)
+            size = 3) +
   theme_minimal() +
   theme(legend.position = "none")
+  
 a
 ```
 
@@ -297,7 +299,7 @@ b <- b +
             color = "red",
             hjust = 1.1,
             vjust = -8,
-            size = 3)
+            size = 3) +
   theme_minimal() +
   theme(legend.position = "none")
 b
@@ -320,14 +322,15 @@ c <- c +
             color = "red",
             hjust = 1.1,
             vjust = -8,
-            size = 3)
+            size = 3) +
   theme_minimal() +
   theme(legend.position = "none")
 c
 ```
 
 ```{r}
-#| echo = FALSE
+#| echo: FALSE
+
 monthly_vessel_movement <- vessel_movement %>% 
   filter(type == "FishingVessel") %>%
   mutate(month = month(time)) %>% 
