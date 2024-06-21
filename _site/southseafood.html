@@ -6,8 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing">
-<meta name="dcterms.date" content="2024-06-21">
 
 <title>Group 7 - Deep-Dive SouthSeaFood Express</title>
 <style>
@@ -133,11 +131,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">1. Overview</a></li>
+  <li><a href="#path-visualisation" id="toc-path-visualisation" class="nav-link" data-scroll-target="#path-visualisation">2. Path Visualisation</a>
+  <ul class="collapse">
+  <li><a href="#path-of-snapper-snatcher" id="toc-path-of-snapper-snatcher" class="nav-link" data-scroll-target="#path-of-snapper-snatcher">2.1 Path of Snapper Snatcher</a></li>
+  <li><a href="#path-of-roach-robber" id="toc-path-of-roach-robber" class="nav-link" data-scroll-target="#path-of-roach-robber">2.2 Path of Roach Robber</a></li>
+  <li><a href="#combined-paths-of-vessels" id="toc-combined-paths-of-vessels" class="nav-link" data-scroll-target="#combined-paths-of-vessels">2.3 Combined Paths of Vessels</a></li>
+  </ul></li>
+  <li><a href="#analysing-dwell-time-at-the-preserve-areas" id="toc-analysing-dwell-time-at-the-preserve-areas" class="nav-link" data-scroll-target="#analysing-dwell-time-at-the-preserve-areas">3. Analysing Dwell Time at the Preserve Areas</a></li>
+  <li><a href="#summary-and-findings" id="toc-summary-and-findings" class="nav-link" data-scroll-target="#summary-and-findings">4. Summary and Findings</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -146,21 +158,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">June 21, 2024</p>
-    </div>
-  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
@@ -176,8 +176,82 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="overview" class="level1">
+<h1>1. Overview</h1>
+<p>We first identify the vessels that are linked to SouthSeaFood Express Corp (SEC) - which are Snapper Snatcher and Roach Robber.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Vessel</th>
+<th>Tonnage</th>
+<th>Length Overall</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Snapper Snatcher</td>
+<td>100</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>Roach Robber</td>
+<td>11700</td>
+<td>130</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="path-visualisation" class="level1">
+<h1>2. Path Visualisation</h1>
+<p>We then used path visualisations to try to identify areas that are of interest to us.</p>
+<section id="path-of-snapper-snatcher" class="level2">
+<h2 class="anchored" data-anchor-id="path-of-snapper-snatcher">2.1 Path of Snapper Snatcher</h2>
+<p><img src="images/000018.png" class="img-fluid"></p>
+<p>Snapper Snatcher spent <strong>subtantial time at the Ghoti Preserve</strong>. Given such a high dwell time, it would likely mean that they were illegally fishing there.</p>
+<p>Snapper Snatcher <strong>spent time at Exit East - they could be engaging in Deep Sea Fishing</strong> (these are activities tied to the Exit Areas).</p>
+<p>We think that this is where they can fish for Salmon (assumption) - given that Salmon was not found in the other fishing grounds.</p>
+</section>
+<section id="path-of-roach-robber" class="level2">
+<h2 class="anchored" data-anchor-id="path-of-roach-robber">2.2 Path of Roach Robber</h2>
+<p><img src="images/000016.png" class="img-fluid"></p>
+<p>Interestingly, Roach Robber did not spend substantial time at the preserve areas, sticking to <strong>mostly being in the port, Wrasse Beds and at Nav C</strong>.</p>
+</section>
+<section id="combined-paths-of-vessels" class="level2">
+<h2 class="anchored" data-anchor-id="combined-paths-of-vessels">2.3 Combined Paths of Vessels</h2>
+<p><img src="images/000010.png" class="img-fluid"></p>
+<p>When we combined their paths, we can look at the areas where they were together. We can further <strong>utilise our shiny app</strong> to look at the specific time frame.</p>
+<p><img src="images/Picture1.png" class="img-fluid"></p>
+<p>From analysing their paths, we note that there are area worth further analysing:</p>
+<ul>
+<li><p><strong>Time spent in the Preserve Areas</strong> - we can further look at the other Preserve Areas and analyse the dwell times of vessels and how that changes over time</p></li>
+<li><p><strong>Possibility of Transshipment</strong> - Snapper Snatcher is a small vessel and it is unlikely that they are able to hold so many catch within their vessel. Their timing and location with Roach Robber do coincide and we think that there is a possibility of transshipment, especially at the Nav points.</p></li>
+<li><p><strong>Compare dates at Preserve Areas, vs Dates at the Ports and Matching Illegal Fish Cargoes</strong>. From the path, we can further compare the dates that the vessels return to ports after spending time at Preserve areas, and cross check with the cargoes at that port to determine if there were any illegal cargoes offloaded. That way, we can be more certain of which vessel engage in illegal fishing and sold it at the harbor.</p></li>
+</ul>
+</section>
+</section>
+<section id="analysing-dwell-time-at-the-preserve-areas" class="level1">
+<h1>3. Analysing Dwell Time at the Preserve Areas</h1>
+<p>From the earlier analysis, we note that vessels which spend a longer time at preserve areas may be engaging in IUU fishing. For the analysis below we look at the Ghoti Preserve, looking at the number of <strong>unique vessels which went into Ghoti Preserve, and their mean stay duration in hours</strong>.</p>
+<p><img src="images/11.png" class="img-fluid"></p>
+<p><strong>We can see that after Mar, the mean stay duration dropped, with a smaller peak in Jul before subsequently increasing from Sep onwards.</strong></p>
+<p>We can further look at the boxplot.</p>
+<p><img src="images/12.png" class="img-fluid"></p>
+<p>And analyse through heatmap.</p>
+<p><img src="images/13.png" class="img-fluid"></p>
+<p>This is further enhanced with the interactivity from the ShinyApp. As we look at the boxplot, we would be able to hover over those outliers and quickly identify the vessels. This would help us to quickly understand which vessels are spending more time than usual at any specific areas.</p>
+</section>
+<section id="summary-and-findings" class="level1">
+<h1>4. Summary and Findings</h1>
+<p>From the analysis of SEC vessels, we were able to identify the following:</p>
+<ul>
+<li><p>Vessels lingering in Preserve Areas may be engaged in IUU activities</p></li>
+<li><p>We can compare the paths of various vessels to identify transshipment locations</p></li>
+<li><p>Through analysis of the dwell times at the preserve areas or other locations, we can identify over-stayers and further analyse them</p></li>
+</ul>
+<p>These insights will be useful for us to look at the IUU fishing behaviours and how that changed over time after SEC was caught.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

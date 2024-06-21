@@ -1,13 +1,85 @@
 ---
 title: "Deep-Dive SouthSeaFood Express"
-
-author: "Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing" 
-date: "21 Jun 2024" 
-
 date-modified: "last-modified" 
+
 execute:   
   eval: true   
   echo: true   
   warning: false   
   freeze: true 
 ---
+
+# 1. Overview
+
+We first identify the vessels that are linked to SouthSeaFood Express Corp (SEC) - which are Snapper Snatcher and Roach Robber.
+
+| Vessel           | Tonnage | Length Overall |
+|------------------|---------|----------------|
+| Snapper Snatcher | 100     | 20             |
+| Roach Robber     | 11700   | 130            |
+
+# 2. Path Visualisation
+
+We then used path visualisations to try to identify areas that are of interest to us.
+
+## 2.1 Path of Snapper Snatcher
+
+![](images/000018.png)
+
+Snapper Snatcher spent **subtantial time at the Ghoti Preserve**. Given such a high dwell time, it would likely mean that they were illegally fishing there.
+
+Snapper Snatcher **spent time at Exit East - they could be engaging in Deep Sea Fishing** (these are activities tied to the Exit Areas).
+
+We think that this is where they can fish for Salmon (assumption) - given that Salmon was not found in the other fishing grounds.
+
+## 2.2 Path of Roach Robber
+
+![](images/000016.png)
+
+Interestingly, Roach Robber did not spend substantial time at the preserve areas, sticking to **mostly being in the port, Wrasse Beds and at Nav C**.
+
+## 2.3 Combined Paths of Vessels
+
+![](images/000010.png)
+
+When we combined their paths, we can look at the areas where they were together. We can further **utilise our shiny app** to look at the specific time frame.
+
+![](images/Picture1.png)
+
+From analysing their paths, we note that there are area worth further analysing:
+
+-   **Time spent in the Preserve Areas** - we can further look at the other Preserve Areas and analyse the dwell times of vessels and how that changes over time
+
+-   **Possibility of Transshipment** - Snapper Snatcher is a small vessel and it is unlikely that they are able to hold so many catch within their vessel. Their timing and location with Roach Robber do coincide and we think that there is a possibility of transshipment, especially at the Nav points.
+
+-   **Compare dates at Preserve Areas, vs Dates at the Ports and Matching Illegal Fish Cargoes**. From the path, we can further compare the dates that the vessels return to ports after spending time at Preserve areas, and cross check with the cargoes at that port to determine if there were any illegal cargoes offloaded. That way, we can be more certain of which vessel engage in illegal fishing and sold it at the harbor.
+
+# 3. Analysing Dwell Time at the Preserve Areas
+
+From the earlier analysis, we note that vessels which spend a longer time at preserve areas may be engaging in IUU fishing. For the analysis below we look at the Ghoti Preserve, looking at the number of **unique vessels which went into Ghoti Preserve, and their mean stay duration in hours**.
+
+![](images/11.png)
+
+**We can see that after Mar, the mean stay duration dropped, with a smaller peak in Jul before subsequently increasing from Sep onwards.**
+
+We can further look at the boxplot.
+
+![](images/12.png)
+
+And analyse through heatmap.
+
+![](images/13.png)
+
+This is further enhanced with the interactivity from the ShinyApp. As we look at the boxplot, we would be able to hover over those outliers and quickly identify the vessels. This would help us to quickly understand which vessels are spending more time than usual at any specific areas.
+
+# 4. Summary and Findings
+
+From the analysis of SEC vessels, we were able to identify the following:
+
+-   Vessels lingering in Preserve Areas may be engaged in IUU activities
+
+-   We can compare the paths of various vessels to identify transshipment locations
+
+-   Through analysis of the dwell times at the preserve areas or other locations, we can identify over-stayers and further analyse them
+
+These insights will be useful for us to look at the IUU fishing behaviours and how that changed over time after SEC was caught.
