@@ -2,20 +2,29 @@ project:
   type: website
 
 website:
-  title: "Visual Analytics Project"
+  title: "Group 7"
   navbar:
     left:
-      - href: Project_Proposal.html
-        text: Project Proposal
+      - href: overview.html
+        text: Overview
+      - href: approach.html
+        text: Approach
+      - href: eda.html
+        text: Data Analysis
+      - href: reports.html
+        text: Matching Reports
+      - href: southseafood.html
+        text: SouthSeaFood Express
       - href: Path.html
-        text: Path Plotter   
-      - href: index.qmd
-        text: Home
-      - about.qmd
+        text: Visualising IUU  
+      - href: newbehaviours.html
+        text: IUU Behaviours  
+      - href: Project_Proposal.html
+        text: Proposal
       
-
 format:
   html:
+    page-layout: full
     theme: sandstone
     css: styles.css
     toc: true

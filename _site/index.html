@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing">
+<meta name="dcterms.date" content="2024-06-21">
 
-<title>Visual Analytics Project - Prevent Illegal Fishing in Oceanus</title>
+<title>Group 7 - Visualising Illegal, Unreported and Unregulated (IUU) Fishing in Oceanus</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Visual Analytics Project</span>
+    <span class="navbar-title">Group 7</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -89,20 +91,36 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Project_Proposal.html"> 
-<span class="menu-text">Project Proposal</span></a>
+    <a class="nav-link" href="./overview.html"> 
+<span class="menu-text">Overview</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./approach.html"> 
+<span class="menu-text">Approach</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./eda.html"> 
+<span class="menu-text">Data Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./reports.html"> 
+<span class="menu-text">Matching Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./southseafood.html"> 
+<span class="menu-text">SouthSeaFood Express</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Path.html"> 
-<span class="menu-text">Path Plotter</span></a>
+<span class="menu-text">Visualising IUU</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./newbehaviours.html"> 
+<span class="menu-text">IUU Behaviours</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./Project_Proposal.html"> 
+<span class="menu-text">Proposal</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -112,25 +130,35 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prevent Illegal Fishing in Oceanus</h1>
+<h1 class="title">Visualising Illegal, Unreported and Unregulated (IUU) Fishing in Oceanus</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 21, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -140,6 +168,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><img src="images/clipboard-773640502.png" class="img-fluid"></p>
 <p>In Oceanus, island life is defined by the coming and going of seafaring vessels, many of which are operated by commercial fishing companies. Typically, the movement of ships and goods are a sign of Oceanus’s healthy economy, especially in the fishing business. But mundane routines can be disrupted by a major event. Analysts at FishEye International, a non-profit organization that aims to find and prevent illegal fishing, need your help to better understand one such event.</p>
 <p>FishEye has learned that SouthSeafood Express Corp has been caught fishing illegally. The scandal caused a major disruption in the close-knit fishing community. FishEye has been collecting data on ship movements and shipping records in hopes that they could assemble a cohesive store of knowledge that will allow them to better understand local commercial fishing behavior. FishEye processed open-source and commercial vessel tracking and shipping records into CatchNet: the Oceanus Knowledge Graph. Analysts examine and correct data as it is loaded but need your help to create analytical capabilities for this data.</p>
 <p>This project by <strong><em>Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing</em></strong> aims to provide FishEye a ShinyApp, an interactive tool to explore the movement patterns of the fishing vessels in Oceanus, using SouthSeafood Express as the example of illegal fishing activities.</p>

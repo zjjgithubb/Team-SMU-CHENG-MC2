@@ -1,29 +1,26 @@
 ---
-title: "Path Plotter"
+title: "Visualising IUU Fishing through Paths"
+date-modified: "last-modified" 
 
-format: html
+execute:   
+  eval: true   
+  echo: true   
+  warning: false   
+  freeze: true 
+
+format:
+  html:
+    toc: false
 ---
 
-# Welcome to My Quarto Website
+# Understanding IUU  
 
-This website contains various analyses and visualizations.
-
-# Embedding a Shiny App
-
-You can embed your Shiny app into this website using an iframe.
+![](images/clipboard-773640502.png)
 
 <iframe src="https://zjjgithub.shinyapps.io/PathPlotter/" width="100%" height="800px" frameborder="0">
 
 </iframe>
 
-# Additional Content
+## qeqweq
 
-You can add more sections, text, and other content to your Quarto website.
-
-## Section 1
-
-Some content here.
-
-## Section 2
-
-More content here.
+## s dfsfaf
