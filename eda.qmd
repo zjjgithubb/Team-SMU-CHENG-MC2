@@ -1,13 +1,18 @@
 ---
 title: "Data Analysis"
 
-author: "Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing" 
-date: "21 Jun 2024" 
-
 date-modified: "last-modified" 
 execute:   
   eval: true   
   echo: true   
   warning: false   
   freeze: true 
+  
+format:
+  html:
+    toc: false
 ---
+
+<iframe src="https://hr6p23-xiuhao-liang.shinyapps.io/ShinyDemo/" width="100%" height="800px" frameborder="0">
+
+</iframe>

@@ -67,7 +67,7 @@
     "href": "path.html",
     "title": "Visualising IUU Fishing through Paths",
     "section": "",
-    "text": "Understanding IUU"
+    "text": "To better visualise the IUU behaviours of the fishing vessels, we can first compare the dwell times of the vessels at the various location. This is done through the first tab - “Compare Dwell Times”, where users can select the Company, Vessels and Location Type. To look at specific areas, such as Nemo Reef etc, users can next specify the actual location (or source) for the comparison.\nAn additional filter is available to filter the vessels by their tonnage, so that we can compare vessels of the same types.\nAfter we have a better understanding of the vessels, we can plot their paths using either Single Vessel or Multiple Vessels. Users are able to select the size of the dwell time (which affects the size of the circle), the time range of data to be shown, and to specify the colours of the path. This will help us to visualise the paths of the various vessels, and where they lingered more than usual. The width of the path can also be specified by the user through the Trajetory Linewidth option."
   },
   {
     "objectID": "path.html#section-1",
@@ -82,5 +82,12 @@
     "title": "Path Plotter",
     "section": "Section 2",
     "text": "Section 2\nMore content here."
+  },
+  {
+    "objectID": "path.html#overview-and-guide",
+    "href": "path.html#overview-and-guide",
+    "title": "Visualising IUU Fishing through Paths",
+    "section": "",
+    "text": "To better visualise the IUU behaviours of the fishing vessels, we can first compare the dwell times of the vessels at the various location. This is done through the first tab - “Compare Dwell Times”, where users can select the Company, Vessels and Location Type. To look at specific areas, such as Nemo Reef etc, users can next specify the actual location (or source) for the comparison.\nAn additional filter is available to filter the vessels by their tonnage, so that we can compare vessels of the same types.\nAfter we have a better understanding of the vessels, we can plot their paths using either Single Vessel or Multiple Vessels. Users are able to select the size of the dwell time (which affects the size of the circle), the time range of data to be shown, and to specify the colours of the path. This will help us to visualise the paths of the various vessels, and where they lingered more than usual. The width of the path can also be specified by the user through the Trajetory Linewidth option."
   }
 ]
