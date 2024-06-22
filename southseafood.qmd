@@ -70,6 +70,8 @@ And analyse through heatmap.
 
 ![](images/13.png)
 
+![](images/clipboard-4213340331.png)
+
 This is further enhanced with the interactivity from the ShinyApp. As we look at the boxplot, we would be able to hover over those outliers and quickly identify the vessels. This would help us to quickly understand which vessels are spending more time than usual at any specific areas.
 
 # 4. Summary and Findings
