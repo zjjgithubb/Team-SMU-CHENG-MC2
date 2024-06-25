@@ -180,5 +180,33 @@
     "title": "New IUU Behaviours",
     "section": "",
     "text": "There is abnormally high number of pings for fishing vessels at Nemo Reef. Since Nemo Reef is a Ecological Preserve, the correct safe navigation around it is through Nav D.\nGiven that the fish species (Wrasse, Tuna, Birdseye, Beauvoir) in Nemo Reef, can also be found in other fishing grounds, there is likelihood of IUU here. The presence of Helenaa is the only tell-tale sign if a fishing vessel indeed fish in Nemo Reef.\nThere is abornormally high number of pings for fishing vessels at Exit East. Since the activities in Exit E are international shipping and Deep Sea Fishing, it is not a designated Fishing Ground within Oceanus. Thus, we should be only expecting cargo vessels through Exit E, as observed in other exits. :::\n\n\n\nUnderstand Average Dwell by Location\n\n\nCode\nvessel_movement$loc &lt;- factor(vessel_movement$loc,\n                              levels = c(\"City of Himark\",\n                                      \"City of Lomark\",\n                                      \"City of Haacklee\",\n                                      \"City of Paackland\",\n                                      \"City of South Paackland\",\n                                      \"City of Port Grove\",\n                                      \"Ghoti Preserve\", \n                                      \"Nemo Reef\", \n                                      \"Don Limpet Preserve\",\n                                      \"Cod Table\", \n                                      \"Wrasse Beds\",\n                                      \"Tuna Shelf\",\n                                      \"Exit North\",\n                                      \"Exit South\",\n                                      \"Exit East\",\n                                      \"Exit West\",\n                                      \"Nav 1\",\"Nav 2\", \"Nav 3\", \n                                      \"Nav A\", \"Nav B\", \"Nav C\", \"Nav D\", \"Nav E\"))\nggplot(vessel_movement, aes(x = loc, \n                            y = dwell,\n                            fill = loc_type)) +\n  geom_boxplot() +\n  theme_minimal() +\n  labs(title = \"Median Dwell Time by Location\", \n       x = \"Location\", \n       y = \"Median Dwell Time\") +\n  scale_y_continuous(limits = c(0, 300000)) +\n  coord_flip()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights from this visualisation\n\n\n\n\nFor the cities, the outliers can be explained by the extend stay due to repair and replenishment purposes.\nFor all three ecological preserves, there are many outliers, and this is a tell-tale sign of extended stay in the preserves by fishing vessels for IUU fishing.\nFor the fishing grounds, the extended stay of fishing vessels may be explained by conducting of transshipment between small fishing vessels and bigger reefer/cargo ships, where the small fishing vessels stay at the location for fishing. There are fishing vessels that are out in the sea for months.\nFor the navigation points, Exit E display signs of abnormality due to its high number of outliers compared to other navigation points that are used for international shipping (Exit North, Exit South and Exit West). Nav 1 and Nav A may also be investigated since there are high numbers of outliers, and also, they are at the fringe of the Ghoti and Don Limpet Preserves respectively."
+  },
+  {
+    "objectID": "reports.html",
+    "href": "reports.html",
+    "title": "Matching Reports",
+    "section": "",
+    "text": "FishEye analysts face a challenge: they purchased port exit records instead of ship off-load records. These records do not contain information about which vessels delivered the products. Therefore, we need to develop a method to associate vessels with their probable cargo. This report details our matching method used to address this issue."
+  },
+  {
+    "objectID": "reports.html#initial-matching-using-harbor_reports_data",
+    "href": "reports.html#initial-matching-using-harbor_reports_data",
+    "title": "Matching Reports",
+    "section": "3.1 Initial Matching Using Harbor_Reports_data",
+    "text": "3.1 Initial Matching Using Harbor_Reports_data\nObjective: Identify vessels associated with each order by merging Transaction_data and Harbor_Reports_data based on date and port.\nMethod:\n\nLeft join Transaction_data with Harbor_Reports_data based on date and port\nFor each transaction, identify vessels reported at the corresponding date and port"
+  },
+  {
+    "objectID": "reports.html#further-matching-using-transponderping-data",
+    "href": "reports.html#further-matching-using-transponderping-data",
+    "title": "Matching Reports",
+    "section": "3.2 Further Matching Using TransponderPing Data",
+    "text": "3.2 Further Matching Using TransponderPing Data\nObjective: For orders not matched to vessels in step 3.1, use TransponderPing data to identify potential vessels.\nMethod:\n\nFor records where ProbableVessel is NA, match using transaction date and port with TransponderPing data\nIdentify vessels with signals near the corresponding date and port\n\nInsight: After completing this step, we found that all previously unmatched cases correspond to multiple possible vessels, indicating the need for further filtering."
+  },
+  {
+    "objectID": "reports.html#filtering-unlikely-vessels-using-vessel-movement-data",
+    "href": "reports.html#filtering-unlikely-vessels-using-vessel-movement-data",
+    "title": "Matching Reports",
+    "section": "3.3 Filtering Unlikely Vessels Using Vessel Movement Data",
+    "text": "3.3 Filtering Unlikely Vessels Using Vessel Movement Data\nObjective: Use vessel_movement_data to determine the paths of vessels associated with each transaction during the observation period, and filter out unlikely vessels from the list of potential candidates.\nMethod:\n\nHistorical Path Analysis:\n\nExamine the routes of all vessels associated with the current record within 24 hours before and after the current record time.\n\nCriteria for Identifying Vessels That Delivered Products:\n\nArrival Record: The vessel has a documented arrival at the port.\nPrevious and Next Port Records: The vessel has records of arriving from a previous port and/or departing to another port after unloading.\n\nIdentifying Unlikely Vessels:\n\nExclude the following vessels:\n\n\nVessels that did not significantly change their geographical location within the observation time window (potentially docked at the current port).\n\nVessels showing frequent geographical movements, which may indicate tourism or sightseeing activities rather than cargo transport."
   }
 ]
