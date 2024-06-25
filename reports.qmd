@@ -127,6 +127,6 @@ girafe(ggobj = p, width_svg = 25, height_svg = 15, options = list(
 
 The Shiny App below provides an illustration of the matched delivery reports. Here, the analyst can choose to filter by the time frame (based on the quarters), the fish species, and the ports in Oceanus. The illegal fish species that we have specified are those only found in the Preserve Areas, namely: Sockfish, Helenaa, Offidiaa and Salmon (which is not found in any of the fishing region).
 
-<iframe src="https://ynforvaashiny.shinyapps.io/608project/" width="100%" height="400px" frameborder="0">
+<iframe src="https://ynforvaashiny.shinyapps.io/608project/" width="100%" height="800px" scrolling = "no" frameborder="0">
 
 </iframe>
