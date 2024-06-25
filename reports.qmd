@@ -14,11 +14,11 @@ execute:
   freeze: true 
 ---
 
-# 1.Introduction
+# 1. Introduction
 
 FishEye analysts face a challenge: they purchased port exit records instead of ship off-load records. These records do not contain information about which vessels delivered the products. Therefore, we need to develop a method to associate vessels with their probable cargo. This report details our matching method used to address this issue.
 
-# 2.Overview of the Matching Method
+# 2. Overview of the Matching Method
 
 Our method consists of three main steps, gradually narrowing down the range of possible vessels:
 
@@ -28,7 +28,7 @@ Our method consists of three main steps, gradually narrowing down the range of p
 
 3.  Filtering unlikely vessels using **Vessel Movement data**
 
-# 3.Detailed Matching Process
+# 3. Detailed Matching Process
 
 ## 3.1 Initial Matching Using Harbor_Reports_data
 
@@ -74,7 +74,7 @@ Our method consists of three main steps, gradually narrowing down the range of p
         a)  Vessels that did not significantly change their geographical location within the observation time window (potentially docked at the current port).\
         b)  Vessels showing frequent geographical movements, which may indicate tourism or sightseeing activities rather than cargo transport.
 
-# 4.Conclusion
+# 4. Initial Visualisation
 
 Through this multi-step matching process, we were able to associate vessels with their probable cargo, overcoming the limitation of lacking direct ship off-load records in the original data. This method integrates port reports, transponder signals, and vessel movement data to construct a relatively comprehensive association picture.
 
@@ -121,3 +121,11 @@ p <- ggplot(Transaction_matchresult2_visual, aes(x = quarter, y = 0, fill = unma
 girafe(ggobj = p, width_svg = 25, height_svg = 15, options = list(
   opts_sizing(rescale = TRUE)))
 ```
+
+# 5. Shiny App - Matched Reports 
+
+The Shiny App below provides an illustration of the matched delivery reports. Here, the analyst can choose to filter by the time frame (based on the quarters), the fish species, and the ports in Oceanus. The illegal fish species that we have specified are those only found in the Preserve Areas, namely: Sockfish, Helenaa, Offidiaa and Salmon (which is not found in any of the fishing region).
+
+<iframe src="https://ynforvaashiny.shinyapps.io/608project/" width="100%" height="600px" frameborder="0">
+
+</iframe>
