@@ -1,17 +1,31 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Visualising Illegal, Unreported and Unregulated (IUU) Fishing in Oceanus",
+    "objectID": "southseafood.html",
+    "href": "southseafood.html",
+    "title": "Deep-Dive SouthSeaFood Express",
     "section": "",
-    "text": "In Oceanus, island life is defined by the coming and going of seafaring vessels, many of which are operated by commercial fishing companies. Typically, the movement of ships and goods are a sign of Oceanus’s healthy economy, especially in the fishing business. But mundane routines can be disrupted by a major event. Analysts at FishEye International, a non-profit organization that aims to find and prevent illegal fishing, need your help to better understand one such event.\nFishEye has learned that SouthSeafood Express Corp has been caught fishing illegally. The scandal caused a major disruption in the close-knit fishing community. FishEye has been collecting data on ship movements and shipping records in hopes that they could assemble a cohesive store of knowledge that will allow them to better understand local commercial fishing behavior. FishEye processed open-source and commercial vessel tracking and shipping records into CatchNet: the Oceanus Knowledge Graph. Analysts examine and correct data as it is loaded but need your help to create analytical capabilities for this data.\nThis project by Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing aims to provide FishEye visualisations and tools to explore the movement patterns of the fishing vessels in Oceanus, using SouthSeafood Express as the example of illegal fishing activities."
+    "text": "We first identify the vessels that are linked to SouthSeaFood Express Corp (SEC) - which are Snapper Snatcher and Roach Robber.\n\n\n\nVessel\nTonnage\nLength Overall\n\n\n\n\nSnapper Snatcher\n100\n20\n\n\nRoach Robber\n11700\n130"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "objectID": "southseafood.html#path-of-snapper-snatcher",
+    "href": "southseafood.html#path-of-snapper-snatcher",
+    "title": "Deep-Dive SouthSeaFood Express",
+    "section": "2.1 Path of Snapper Snatcher",
+    "text": "2.1 Path of Snapper Snatcher\n\nSnapper Snatcher spent subtantial time at the Ghoti Preserve. Given such a high dwell time, it would likely mean that they were illegally fishing there.\nSnapper Snatcher spent time at Exit East - they could be engaging in Deep Sea Fishing (these are activities tied to the Exit Areas).\nWe think that this is where they can fish for Salmon (assumption) - given that Salmon was not found in the other fishing grounds."
+  },
+  {
+    "objectID": "southseafood.html#path-of-roach-robber",
+    "href": "southseafood.html#path-of-roach-robber",
+    "title": "Deep-Dive SouthSeaFood Express",
+    "section": "2.2 Path of Roach Robber",
+    "text": "2.2 Path of Roach Robber\n\nInterestingly, Roach Robber did not spend substantial time at the preserve areas, sticking to mostly being in the port, Wrasse Beds and at Nav C."
+  },
+  {
+    "objectID": "southseafood.html#combined-paths-of-vessels",
+    "href": "southseafood.html#combined-paths-of-vessels",
+    "title": "Deep-Dive SouthSeaFood Express",
+    "section": "2.3 Combined Paths of Vessels",
+    "text": "2.3 Combined Paths of Vessels\n\nWhen we combined their paths, we can look at the areas where they were together. We can further utilise our shiny app to look at the specific time frame.\n\nFrom analysing their paths, we note that there are area worth further analysing:\n\nTime spent in the Preserve Areas - we can further look at the other Preserve Areas and analyse the dwell times of vessels and how that changes over time\nPossibility of Transshipment - Snapper Snatcher is a small vessel and it is unlikely that they are able to hold so many catch within their vessel. Their timing and location with Roach Robber do coincide and we think that there is a possibility of transshipment, especially at the Nav points.\nCompare dates at Preserve Areas, vs Dates at the Ports and Matching Illegal Fish Cargoes. From the path, we can further compare the dates that the vessels return to ports after spending time at Preserve areas, and cross check with the cargoes at that port to determine if there were any illegal cargoes offloaded. That way, we can be more certain of which vessel engage in illegal fishing and sold it at the harbor."
   },
   {
     "objectID": "Project_Proposal.html",
@@ -63,39 +77,18 @@
     "text": "Storyboard"
   },
   {
-    "objectID": "path.html",
-    "href": "path.html",
-    "title": "Visualising IUU Fishing through Paths",
-    "section": "",
-    "text": "To better visualise the IUU behaviours of the fishing vessels, we can first compare the dwell times of the vessels at the various location.\n\n\nThis is done through the first tab - “Compare Dwell Times”, where users can select the Company, Vessels and Location Type. To look at specific areas, such as Nemo Reef etc, users can next specify the actual location (or source) for the comparison.\nAn additional filter is available to filter the vessels by their tonnage, so that we can compare vessels of the same types.\n\n\n\nAfter we have a better understanding of the vessels, we can plot their paths using either Single Vessel or Multiple Vessels. Users are able to select the size of the dwell time (which affects the size of the circle), the time range of data to be shown, and to specify the colours of the path. This will help us to visualise the paths of the various vessels, and where they lingered more than usual. The width of the path can also be specified by the user through the Trajetory Linewidth option."
-  },
-  {
-    "objectID": "path.html#section-1",
-    "href": "path.html#section-1",
-    "title": "Path Plotter",
-    "section": "Section 1",
-    "text": "Section 1\nSome content here."
-  },
-  {
-    "objectID": "path.html#section-2",
-    "href": "path.html#section-2",
-    "title": "Path Plotter",
-    "section": "Section 2",
-    "text": "Section 2\nMore content here."
-  },
-  {
-    "objectID": "path.html#overview-and-guide",
-    "href": "path.html#overview-and-guide",
-    "title": "Visualising IUU Fishing through Paths",
-    "section": "",
-    "text": "To better visualise the IUU behaviours of the fishing vessels, we can first compare the dwell times of the vessels at the various location.\n\n\nThis is done through the first tab - “Compare Dwell Times”, where users can select the Company, Vessels and Location Type. To look at specific areas, such as Nemo Reef etc, users can next specify the actual location (or source) for the comparison.\nAn additional filter is available to filter the vessels by their tonnage, so that we can compare vessels of the same types.\n\n\n\nAfter we have a better understanding of the vessels, we can plot their paths using either Single Vessel or Multiple Vessels. Users are able to select the size of the dwell time (which affects the size of the circle), the time range of data to be shown, and to specify the colours of the path. This will help us to visualise the paths of the various vessels, and where they lingered more than usual. The width of the path can also be specified by the user through the Trajetory Linewidth option."
-  },
-  {
     "objectID": "overview.html",
     "href": "overview.html",
     "title": "Overview and Objectives",
     "section": "",
     "text": "VAST Challenge 2024 - Mini Challenge 2\nThis project was done as part of the VAST Challenge 2024, and the team decided to tackle the Mini Challenge 2.\n\nIllegal, unreported, and unregulated (IUU) fishing poses a significant threat to global marine ecosystems and sustainable fisheries. It undermines conservation efforts, depletes fish stocks, and distorts markets by introducing illegally caught fish into the supply chain. IUU fishing also compromises food security, especially for communities that rely heavily on fish as a primary protein source. By tackling IUU fishing, we can protect marine biodiversity, ensure the long-term sustainability of fisheries, promote fair trade practices, and uphold the livelihoods of those dependent on legal fishing activities. Effective measures against IUU fishing are crucial for maintaining healthy oceans and resilient coastal communities.\n\n\nKey Tasks under MC2\nThe following are the key tasks:\nFishEye analysts need your help to perform geographic and temporal analysis of the CatchNet data so they can prevent illegal fishing from happening again. Your task is to develop new visual analytics tools and workflows that can be used to discover and understand signatures of different types of behavior. Can you use your tool to visualize a signature of SouthSeafood Express Corp’s illegal behavior? FishEye needs your help to develop a workflow to find other instances of illegal behavior.\n\nFishEye analysts have long wanted to better understand the flow of commercially caught fish through Oceanus’s many ports. But as they were loading data into CatchNet, they discovered they had purchased the wrong port records. They wanted to get the ship off-load records, but they instead got the port-exit records (essentially trucks/trains leaving the port area). Port exit records do not include which vessel that delivered the products. Given this limitation, develop a visualization system to associate vessels with their probable cargos. Which vessels deliver which products and when? What are the seasonal trends and anomalies in the port exit records?\nDevelop visualizations that illustrate the inappropriate behavior of SouthSeafood Express Corp vessels. How do their movement and catch contents compare to other fishing vessels? When and where did SouthSeafood Express Corp vessels perform their illegal fishing? How many different types of suspicious behaviors are observed? Use visual evidence to justify your conclusions.\nTo support further Fisheye investigations, develop visual analytics workflows that allow you to discover other vessels engaging in behaviors similar to SouthSeafood Express Corp’s illegal activities? Provide visual evidence of the similarities.\nHow did fishing activity change after SouthSeafood Express Corp was caught? What new behaviors in the Oceanus commercial fishing community are most suspicious and why?"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Visualising Illegal, Unreported and Unregulated (IUU) Fishing in Oceanus",
+    "section": "",
+    "text": "In Oceanus, island life is defined by the coming and going of seafaring vessels, many of which are operated by commercial fishing companies. Typically, the movement of ships and goods are a sign of Oceanus’s healthy economy, especially in the fishing business. But mundane routines can be disrupted by a major event. Analysts at FishEye International, a non-profit organization that aims to find and prevent illegal fishing, need your help to better understand one such event.\nFishEye has learned that SouthSeafood Express Corp has been caught fishing illegally. The scandal caused a major disruption in the close-knit fishing community. FishEye has been collecting data on ship movements and shipping records in hopes that they could assemble a cohesive store of knowledge that will allow them to better understand local commercial fishing behavior. FishEye processed open-source and commercial vessel tracking and shipping records into CatchNet: the Oceanus Knowledge Graph. Analysts examine and correct data as it is loaded but need your help to create analytical capabilities for this data.\nThis project by Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing aims to provide FishEye visualisations and tools to explore the movement patterns of the fishing vessels in Oceanus, using SouthSeafood Express as the example of illegal fishing activities."
   },
   {
     "objectID": "approach.html",
@@ -119,46 +112,25 @@
     "text": "After we performed the data analysis, we will try to learn more about IUU through the activities of SouthSeaFood Express.\nThis include check the vessels under this company, looking at the paths in Oceanus, where they visited and stayed and what activities were suspicious.\nAn understanding of their activities would help us to identify other IUU activities, which leads us to the last part."
   },
   {
-    "objectID": "eda.html",
-    "href": "eda.html",
-    "title": "Data Analysis",
-    "section": "",
-    "text": "Understanding the Oceanus Fishing Industry\nTo understand IUU behaviors, we must first identify baseline behaviors, enabling us to detect anomalies within the vast sea of data. To help the analysts establish baseline understanding of Oceanus Fishing Industry, the following data exploration application will enable understanding the following:\n\nDwell time by location and vessel type, with tooltip to show Vessel Name, Company, Tonnage, Length, Dwell Time, Type of Vessel, and the date that the vessel is at the selected location. By this exploration, we are able to pin point certain vessels that have excessive dwell time in certain locations, where excessive dwell could be a sign of IUU.\nCargo in quantity ton, with selector for location, fish species and the selected date for comparison. The default date is set to 14 May 2035, the postulated date that Southseafood Express Corp was caught and ceased operation. The comparison before and after allows the analyst to understand the changes in delivery behaviour at the ports.\nMonthly visits, with selector of locations, enable analyst to know the mean and median visit frequency in the selected locations, as well as have an overview of the visit frequency through the months. Through this visualisation, analyst will be able to identify period of peak or trough against it mean and median."
-  },
-  {
-    "objectID": "southseafood.html",
-    "href": "southseafood.html",
-    "title": "Deep-Dive SouthSeaFood Express",
-    "section": "",
-    "text": "We first identify the vessels that are linked to SouthSeaFood Express Corp (SEC) - which are Snapper Snatcher and Roach Robber.\n\n\n\nVessel\nTonnage\nLength Overall\n\n\n\n\nSnapper Snatcher\n100\n20\n\n\nRoach Robber\n11700\n130"
-  },
-  {
-    "objectID": "southseafood.html#path-of-snapper-snatcher",
-    "href": "southseafood.html#path-of-snapper-snatcher",
-    "title": "Deep-Dive SouthSeaFood Express",
-    "section": "2.1 Path of Snapper Snatcher",
-    "text": "2.1 Path of Snapper Snatcher\n\nSnapper Snatcher spent subtantial time at the Ghoti Preserve. Given such a high dwell time, it would likely mean that they were illegally fishing there.\nSnapper Snatcher spent time at Exit East - they could be engaging in Deep Sea Fishing (these are activities tied to the Exit Areas).\nWe think that this is where they can fish for Salmon (assumption) - given that Salmon was not found in the other fishing grounds."
-  },
-  {
-    "objectID": "southseafood.html#path-of-roach-robber",
-    "href": "southseafood.html#path-of-roach-robber",
-    "title": "Deep-Dive SouthSeaFood Express",
-    "section": "2.2 Path of Roach Robber",
-    "text": "2.2 Path of Roach Robber\n\nInterestingly, Roach Robber did not spend substantial time at the preserve areas, sticking to mostly being in the port, Wrasse Beds and at Nav C."
-  },
-  {
-    "objectID": "southseafood.html#combined-paths-of-vessels",
-    "href": "southseafood.html#combined-paths-of-vessels",
-    "title": "Deep-Dive SouthSeaFood Express",
-    "section": "2.3 Combined Paths of Vessels",
-    "text": "2.3 Combined Paths of Vessels\n\nWhen we combined their paths, we can look at the areas where they were together. We can further utilise our shiny app to look at the specific time frame.\n\nFrom analysing their paths, we note that there are area worth further analysing:\n\nTime spent in the Preserve Areas - we can further look at the other Preserve Areas and analyse the dwell times of vessels and how that changes over time\nPossibility of Transshipment - Snapper Snatcher is a small vessel and it is unlikely that they are able to hold so many catch within their vessel. Their timing and location with Roach Robber do coincide and we think that there is a possibility of transshipment, especially at the Nav points.\nCompare dates at Preserve Areas, vs Dates at the Ports and Matching Illegal Fish Cargoes. From the path, we can further compare the dates that the vessels return to ports after spending time at Preserve areas, and cross check with the cargoes at that port to determine if there were any illegal cargoes offloaded. That way, we can be more certain of which vessel engage in illegal fishing and sold it at the harbor."
-  },
-  {
     "objectID": "approach.html#part-3---discover-iuu-activities-and-identify-new-behaviours",
     "href": "approach.html#part-3---discover-iuu-activities-and-identify-new-behaviours",
     "title": "Approach",
     "section": "",
     "text": "With a better understanding of the IUU activities, we will go back to the data and try to filter out vessels or import records that are similar to the activities conducted by SouthSeaFood Express.\nThereafter, we will also compare the trends and activities - such as the dwell time in the Preserve areas, or any change in the paths of the vessel to try to identify new behaviours."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "eda.html",
+    "href": "eda.html",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "Understanding the Oceanus Fishing Industry\nTo understand IUU behaviors, we must first identify baseline behaviors, enabling us to detect anomalies within the vast sea of data. To help the analysts establish baseline understanding of Oceanus Fishing Industry, the following data exploration application will enable understanding the following:\n\nDwell time by location and vessel type, with tooltip to show Vessel Name, Company, Tonnage, Length, Dwell Time, Type of Vessel, and the date that the vessel is at the selected location. By this exploration, we are able to pin point certain vessels that have excessive dwell time in certain locations, where excessive dwell could be a sign of IUU.\nCargo in quantity ton, with selector for location, fish species and the selected date for comparison. The default date is set to 14 May 2035, the postulated date that Southseafood Express Corp was caught and ceased operation. The comparison before and after allows the analyst to understand the changes in delivery behaviour at the ports.\nMonthly visits, with selector of locations, enable analyst to know the mean and median visit frequency in the selected locations, as well as have an overview of the visit frequency through the months. Through this visualisation, analyst will be able to identify period of peak or trough against it mean and median."
   },
   {
     "objectID": "newbehaviours.html",
@@ -180,6 +152,20 @@
     "title": "New IUU Behaviours",
     "section": "",
     "text": "There is abnormally high number of pings for fishing vessels at Nemo Reef. Since Nemo Reef is a Ecological Preserve, the correct safe navigation around it is through Nav D.\nGiven that the fish species (Wrasse, Tuna, Birdseye, Beauvoir) in Nemo Reef, can also be found in other fishing grounds, there is likelihood of IUU here. The presence of Helenaa is the only tell-tale sign if a fishing vessel indeed fish in Nemo Reef.\nThere is abornormally high number of pings for fishing vessels at Exit East. Since the activities in Exit E are international shipping and Deep Sea Fishing, it is not a designated Fishing Ground within Oceanus. Thus, we should be only expecting cargo vessels through Exit E, as observed in other exits. :::\n\n\n\nUnderstand Average Dwell by Location\n\n\nCode\nvessel_movement$loc &lt;- factor(vessel_movement$loc,\n                              levels = c(\"City of Himark\",\n                                      \"City of Lomark\",\n                                      \"City of Haacklee\",\n                                      \"City of Paackland\",\n                                      \"City of South Paackland\",\n                                      \"City of Port Grove\",\n                                      \"Ghoti Preserve\", \n                                      \"Nemo Reef\", \n                                      \"Don Limpet Preserve\",\n                                      \"Cod Table\", \n                                      \"Wrasse Beds\",\n                                      \"Tuna Shelf\",\n                                      \"Exit North\",\n                                      \"Exit South\",\n                                      \"Exit East\",\n                                      \"Exit West\",\n                                      \"Nav 1\",\"Nav 2\", \"Nav 3\", \n                                      \"Nav A\", \"Nav B\", \"Nav C\", \"Nav D\", \"Nav E\"))\nggplot(vessel_movement, aes(x = loc, \n                            y = dwell,\n                            fill = loc_type)) +\n  geom_boxplot() +\n  theme_minimal() +\n  labs(title = \"Median Dwell Time by Location\", \n       x = \"Location\", \n       y = \"Median Dwell Time\") +\n  scale_y_continuous(limits = c(0, 300000)) +\n  coord_flip()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights from this visualisation\n\n\n\n\nFor the cities, the outliers can be explained by the extend stay due to repair and replenishment purposes.\nFor all three ecological preserves, there are many outliers, and this is a tell-tale sign of extended stay in the preserves by fishing vessels for IUU fishing.\nFor the fishing grounds, the extended stay of fishing vessels may be explained by conducting of transshipment between small fishing vessels and bigger reefer/cargo ships, where the small fishing vessels stay at the location for fishing. There are fishing vessels that are out in the sea for months.\nFor the navigation points, Exit E display signs of abnormality due to its high number of outliers compared to other navigation points that are used for international shipping (Exit North, Exit South and Exit West). Nav 1 and Nav A may also be investigated since there are high numbers of outliers, and also, they are at the fringe of the Ghoti and Don Limpet Preserves respectively."
+  },
+  {
+    "objectID": "path.html",
+    "href": "path.html",
+    "title": "Visualising IUU Fishing through Paths",
+    "section": "",
+    "text": "To better visualise the IUU behaviours of the fishing vessels, we can first compare the dwell times of the vessels at the various location.\n\n\nThis is done through the first tab - “Compare Dwell Times”, where users can select the Company, Vessels and Location Type. To look at specific areas, such as Nemo Reef etc, users can next specify the actual location (or source) for the comparison.\nAn additional filter is available to filter the vessels by their tonnage, so that we can compare vessels of the same types.\n\n\n\nAfter we have a better understanding of the vessels, we can plot their paths using either Single Vessel or Multiple Vessels. Users are able to select the size of the dwell time (which affects the size of the circle), the time range of data to be shown, and to specify the colours of the path. This will help us to visualise the paths of the various vessels, and where they lingered more than usual. The width of the path can also be specified by the user through the Trajetory Linewidth option."
+  },
+  {
+    "objectID": "path.html#overview-and-guide",
+    "href": "path.html#overview-and-guide",
+    "title": "Visualising IUU Fishing through Paths",
+    "section": "",
+    "text": "To better visualise the IUU behaviours of the fishing vessels, we can first compare the dwell times of the vessels at the various location.\n\n\nThis is done through the first tab - “Compare Dwell Times”, where users can select the Company, Vessels and Location Type. To look at specific areas, such as Nemo Reef etc, users can next specify the actual location (or source) for the comparison.\nAn additional filter is available to filter the vessels by their tonnage, so that we can compare vessels of the same types.\n\n\n\nAfter we have a better understanding of the vessels, we can plot their paths using either Single Vessel or Multiple Vessels. Users are able to select the size of the dwell time (which affects the size of the circle), the time range of data to be shown, and to specify the colours of the path. This will help us to visualise the paths of the various vessels, and where they lingered more than usual. The width of the path can also be specified by the user through the Trajetory Linewidth option."
   },
   {
     "objectID": "reports.html",
