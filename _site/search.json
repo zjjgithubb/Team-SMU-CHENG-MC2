@@ -194,5 +194,33 @@
     "title": "Matching Reports",
     "section": "3.3 Filtering Unlikely Vessels Using Vessel Movement Data",
     "text": "3.3 Filtering Unlikely Vessels Using Vessel Movement Data\nObjective: Use vessel_movement_data to determine the paths of vessels associated with each transaction during the observation period, and filter out unlikely vessels from the list of potential candidates.\nMethod:\n\nHistorical Path Analysis:\n\nExamine the routes of all vessels associated with the current record within 24 hours before and after the current record time.\n\nCriteria for Identifying Vessels That Delivered Products:\n\nArrival Record: The vessel has a documented arrival at the port.\nPrevious and Next Port Records: The vessel has records of arriving from a previous port and/or departing to another port after unloading.\n\nIdentifying Unlikely Vessels:\n\nExclude the following vessels:\n\n\nVessels that did not significantly change their geographical location within the observation time window (potentially docked at the current port).\n\nVessels showing frequent geographical movements, which may indicate tourism or sightseeing activities rather than cargo transport."
+  },
+  {
+    "objectID": "guide.html",
+    "href": "guide.html",
+    "title": "User Guide",
+    "section": "",
+    "text": "Click here for the app."
+  },
+  {
+    "objectID": "guide.html#dwell-time-of-vessels",
+    "href": "guide.html#dwell-time-of-vessels",
+    "title": "User Guide",
+    "section": "Dwell Time of Vessels",
+    "text": "Dwell Time of Vessels"
+  },
+  {
+    "objectID": "guide.html#path-plotting",
+    "href": "guide.html#path-plotting",
+    "title": "User Guide",
+    "section": "Path Plotting",
+    "text": "Path Plotting"
+  },
+  {
+    "objectID": "guide.html#heat-map",
+    "href": "guide.html#heat-map",
+    "title": "User Guide",
+    "section": "Heat Map",
+    "text": "Heat Map"
   }
 ]

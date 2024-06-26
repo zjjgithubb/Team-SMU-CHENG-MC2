@@ -1,0 +1,55 @@
+---
+title: "User Guide"
+date-modified: "last-modified" 
+
+format: 
+  html:
+    code-fold: true
+    code-tools: true
+
+execute:   
+  eval: true   
+  echo: true   
+  warning: false   
+  freeze: true 
+---
+
+# Data Analysis
+
+Click [here](https://hr6p23-xiuhao-liang.shinyapps.io/ShinyDemo/) for the app.
+
+## Dwell Time 
+
+![](images/guide1.png)
+
+![](images/guide2.png)
+
+## Cargo Quantity by City
+
+![](images/guide3.png)
+
+## Monthly Visits
+
+![](images/Picture4.png)
+
+# Matching Reports
+
+Click [here](https://ynforvaashiny.shinyapps.io/608project/)for the app.
+
+![](images/Picture5.png)
+
+# Path Plotter
+
+Click [here](https://zjjgithub.shinyapps.io/PathPlotter/) for the app.
+
+## Dwell Time of Vessels
+
+![](images/Picture6.png)
+
+## Path Plotting
+
+![](images/Picture7.png)
+
+## Heat Map 
+
+![](images/Picture8.png)

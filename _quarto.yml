@@ -21,6 +21,8 @@ website:
         text: IUU Behaviours  
       - href: Project_Proposal.html
         text: Proposal
+      - href: guide.html
+        text: User Guide
       
 format:
   html:
