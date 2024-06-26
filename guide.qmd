@@ -18,7 +18,7 @@ execute:
 
 Click [here](https://hr6p23-xiuhao-liang.shinyapps.io/ShinyDemo/) for the app.
 
-## Dwell Time 
+## Dwell Time
 
 ![](images/guide1.png)
 
@@ -50,6 +50,6 @@ Click [here](https://zjjgithub.shinyapps.io/PathPlotter/) for the app.
 
 ![](images/Picture7.png)
 
-## Heat Map 
+## Heat Map
 
 ![](images/Picture8.png)
