@@ -91,6 +91,20 @@
     "text": "In Oceanus, island life is defined by the coming and going of seafaring vessels, many of which are operated by commercial fishing companies. Typically, the movement of ships and goods are a sign of Oceanus’s healthy economy, especially in the fishing business. But mundane routines can be disrupted by a major event. Analysts at FishEye International, a non-profit organization that aims to find and prevent illegal fishing, need your help to better understand one such event.\nFishEye has learned that SouthSeafood Express Corp has been caught fishing illegally. The scandal caused a major disruption in the close-knit fishing community. FishEye has been collecting data on ship movements and shipping records in hopes that they could assemble a cohesive store of knowledge that will allow them to better understand local commercial fishing behavior. FishEye processed open-source and commercial vessel tracking and shipping records into CatchNet: the Oceanus Knowledge Graph. Analysts examine and correct data as it is loaded but need your help to create analytical capabilities for this data.\nThis project by Cheng Chun Chieh, Liang Xiuhao, Zhang Wenjing aims to provide FishEye visualisations and tools to explore the movement patterns of the fishing vessels in Oceanus, using SouthSeafood Express as the example of illegal fishing activities."
   },
   {
+    "objectID": "eda.html",
+    "href": "eda.html",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "Understanding the Oceanus Fishing Industry\nTo understand IUU behaviors, we must first identify baseline behaviors, enabling us to detect anomalies within the vast sea of data. To help the analysts establish baseline understanding of Oceanus Fishing Industry, the following data exploration application will enable understanding the following:\n\nDwell time by location and vessel type, with tooltip to show Vessel Name, Company, Tonnage, Length, Dwell Time, Type of Vessel, and the date that the vessel is at the selected location. By this exploration, we are able to pin point certain vessels that have excessive dwell time in certain locations, where excessive dwell could be a sign of IUU.\nCargo in quantity ton, with selector for location, fish species and the selected date for comparison. The default date is set to 14 May 2035, the postulated date that Southseafood Express Corp was caught and ceased operation. The comparison before and after allows the analyst to understand the changes in delivery behaviour at the ports.\nMonthly visits, with selector of locations, enable analyst to know the mean and median visit frequency in the selected locations, as well as have an overview of the visit frequency through the months. Through this visualisation, analyst will be able to identify period of peak or trough against it mean and median."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
     "objectID": "approach.html",
     "href": "approach.html",
     "title": "Approach",
@@ -119,18 +133,32 @@
     "text": "With a better understanding of the IUU activities, we will go back to the data and try to filter out vessels or import records that are similar to the activities conducted by SouthSeaFood Express.\nThereafter, we will also compare the trends and activities - such as the dwell time in the Preserve areas, or any change in the paths of the vessel to try to identify new behaviours."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "guide.html",
+    "href": "guide.html",
+    "title": "User Guide",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Click here for the app."
   },
   {
-    "objectID": "eda.html",
-    "href": "eda.html",
-    "title": "Data Analysis",
-    "section": "",
-    "text": "Understanding the Oceanus Fishing Industry\nTo understand IUU behaviors, we must first identify baseline behaviors, enabling us to detect anomalies within the vast sea of data. To help the analysts establish baseline understanding of Oceanus Fishing Industry, the following data exploration application will enable understanding the following:\n\nDwell time by location and vessel type, with tooltip to show Vessel Name, Company, Tonnage, Length, Dwell Time, Type of Vessel, and the date that the vessel is at the selected location. By this exploration, we are able to pin point certain vessels that have excessive dwell time in certain locations, where excessive dwell could be a sign of IUU.\nCargo in quantity ton, with selector for location, fish species and the selected date for comparison. The default date is set to 14 May 2035, the postulated date that Southseafood Express Corp was caught and ceased operation. The comparison before and after allows the analyst to understand the changes in delivery behaviour at the ports.\nMonthly visits, with selector of locations, enable analyst to know the mean and median visit frequency in the selected locations, as well as have an overview of the visit frequency through the months. Through this visualisation, analyst will be able to identify period of peak or trough against it mean and median."
+    "objectID": "guide.html#dwell-time-of-vessels",
+    "href": "guide.html#dwell-time-of-vessels",
+    "title": "User Guide",
+    "section": "Dwell Time of Vessels",
+    "text": "Dwell Time of Vessels"
+  },
+  {
+    "objectID": "guide.html#path-plotting",
+    "href": "guide.html#path-plotting",
+    "title": "User Guide",
+    "section": "Path Plotting",
+    "text": "Path Plotting"
+  },
+  {
+    "objectID": "guide.html#heat-map",
+    "href": "guide.html#heat-map",
+    "title": "User Guide",
+    "section": "Heat Map",
+    "text": "Heat Map"
   },
   {
     "objectID": "newbehaviours.html",
@@ -194,33 +222,5 @@
     "title": "Matching Reports",
     "section": "3.3 Filtering Unlikely Vessels Using Vessel Movement Data",
     "text": "3.3 Filtering Unlikely Vessels Using Vessel Movement Data\nObjective: Use vessel_movement_data to determine the paths of vessels associated with each transaction during the observation period, and filter out unlikely vessels from the list of potential candidates.\nMethod:\n\nHistorical Path Analysis:\n\nExamine the routes of all vessels associated with the current record within 24 hours before and after the current record time.\n\nCriteria for Identifying Vessels That Delivered Products:\n\nArrival Record: The vessel has a documented arrival at the port.\nPrevious and Next Port Records: The vessel has records of arriving from a previous port and/or departing to another port after unloading.\n\nIdentifying Unlikely Vessels:\n\nExclude the following vessels:\n\n\nVessels that did not significantly change their geographical location within the observation time window (potentially docked at the current port).\n\nVessels showing frequent geographical movements, which may indicate tourism or sightseeing activities rather than cargo transport."
-  },
-  {
-    "objectID": "guide.html",
-    "href": "guide.html",
-    "title": "User Guide",
-    "section": "",
-    "text": "Click here for the app."
-  },
-  {
-    "objectID": "guide.html#dwell-time-of-vessels",
-    "href": "guide.html#dwell-time-of-vessels",
-    "title": "User Guide",
-    "section": "Dwell Time of Vessels",
-    "text": "Dwell Time of Vessels"
-  },
-  {
-    "objectID": "guide.html#path-plotting",
-    "href": "guide.html#path-plotting",
-    "title": "User Guide",
-    "section": "Path Plotting",
-    "text": "Path Plotting"
-  },
-  {
-    "objectID": "guide.html#heat-map",
-    "href": "guide.html#heat-map",
-    "title": "User Guide",
-    "section": "Heat Map",
-    "text": "Heat Map"
   }
 ]
